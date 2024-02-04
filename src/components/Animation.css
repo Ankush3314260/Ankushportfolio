@@ -1,0 +1,172 @@
+
+/* HEADER||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+body{
+   
+            font-family: "Poppins", sans-serif;
+            
+     
+}
+
+.im{
+   filter: drop-shadow(black 2px 2px 2px);
+}
+ 
+#name{
+    color: transparent;
+   -webkit-text-stroke: 2px black;
+   transition: background-color 0.5 ease;
+}
+
+::selection{
+     background-color: black;
+     color: white;
+}
+
+/*  */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#faded{
+   
+    transform: translateY(10px);
+    transition:  ease-out;
+    transition-duration: 2s;
+    animation: drop 2s ;
+
+}
+@keyframes drop{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+.sidebar{
+    position: absolute;
+    transition: 1s ease-in-out;
+    animation: slide 1s ;
+}
+@keyframes slide {
+    0%{
+        left:-100%;
+    }
+    100%{
+        left:0%;
+    }
+}
+
+
+/* SKILL///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.skill{
+ transform: translateX(10px);
+ transition: 1s ease-in-out;
+ animation: skills 1s;
+}
+@keyframes skills{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(10px);
+    }
+}
+.projects{
+    
+       transition: 1s ease-out;
+       opacity: 1;
+       animation:projects 1s;
+}
+@keyframes projects{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+body::-webkit-scrollbar {
+    width: 0px;
+  
+}
+
+.minor{
+    opacity: 1;
+    transform: translateY(50px);
+    transition: 1s ease ;
+    animation: scrols 1s ;
+
+}
+@keyframes scrols{
+    0%{
+       
+        transform: translateY(0px);
+    }
+    100%{
+      
+        transform: translateY(50px);
+    }
+}
+/* EDICATION ////////////////////////////////////////////////////////////////////////////// */
+
+.leftside{
+    
+  
+    animation: lefts 1s;
+}
+@keyframes lefts {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+.downside{
+    
+  
+    animation: upside 1s;
+}
+@keyframes upside{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.rightside{
+    
+    transition: 1s ease-in;
+    animation: rights 1s;
+}
+@keyframes rights{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.head{
+    position: absolute;
+   color: transparent;
+   -webkit-text-stroke: 2px white;
+   font-size: 200px ;
+   margin-left: 100px;
+    max-height:max-content;
+   top: 40%;
+   padding: 0;
+   display: block;
+  
+    
+   z-index: -30;
+} 
+/* ABOUT//////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
