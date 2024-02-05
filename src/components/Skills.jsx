@@ -47,7 +47,7 @@ function Skills() {
           
             <div  className='p-2 min-w-48 leftside z-10 shadow-lg shadow-black max-sm:w-full overflow-y-auto   sm:max-h-56 max-sm:p-2 max-sm:m-6    text-white  bg-white backdrop-blur-lg   rounded-lg  flex flex-wrap  sm:w-1/3  '>
              
-                  <p className= 'bg-white/10  flex hover:bg-white  text-black rounded-lg p-2 m-1   max-sm:text-md  border-black border-2  hover:transition-all hover:duration-500'>
+                  <p className= 'bg-white/10  flex hover:bg-white   text-black rounded-lg p-2 m-1   max-sm:text-md  border-black border-2  hover:transition-all hover:duration-500'>
                     React.js</p>
                   <p className= ' flex rounded-lg p-2 w-max  m-1 hover:bg-white  hover:transition-all text-black border-black border-2  hover:duration-500 bg-white/10 '>
                     Java Script</p>
@@ -115,7 +115,7 @@ Acknowledging that the tech landscape evolves, I've committed to updating my por
           </div>
          
             </div>
-               <svg  className='w-full absolute z-10 opacity-35 align-bottom -left-56  overflow-hidden max-h-80  -rotate-12 ' xmlns="http://www.w3.org/2000/svg" version="1.0"  height="640px" viewBox="0 0 1280.000000 640.000000" preserveAspectRatio="xMidYMid meet">
+               <svg  className='w-full absolute z-10 opacity-35 align-bottom -left-56 max-sm:-left-10   overflow-hidden max-h-80  -rotate-12 max-sm:w-full' xmlns="http://www.w3.org/2000/svg" version="1.0" width="1040px"  height="640px" viewBox="0 0 1280.000000 640.000000" preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
 <path d="M9470 4404 c0 -39 -78 -180 -155 -279 -88 -113 -105 -147 -105 -206 0 -76 52 -129 129 -129 54 0 94 36 126 115 l25 60 0 -50 c0 -44 -4 -53 -41 -91 l-42 -43 36 9 c67 15 127 51 155 93 23 35 27 51 26 111 0 79 -19 139 -91 306 -50 114 -63 135 -63 104z"/>
@@ -152,7 +152,7 @@ Acknowledging that the tech landscape evolves, I've committed to updating my por
               <div className='w-1/6 bg-white border-slate-500 border-2 shadow-2xl shadow-black rounded-xl overflow-hidden  m-2 flex-wrap  max-sm:w-full'>
 
                   <p className='text-md text-center p-2'>Pdf Merger</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45"><path d="M360-460h40v-80h40q17 0 28.5-11.5T480-580v-40q0-17-11.5-28.5T440-660h-80v200Zm40-120v-40h40v40h-40Zm120 120h80q17 0 28.5-11.5T640-500v-120q0-17-11.5-28.5T600-660h-80v200Zm40-40v-120h40v120h-40Zm120 40h40v-80h40v-40h-40v-40h40v-40h-80v200ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+                    <svg  xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45"><path d="M360-460h40v-80h40q17 0 28.5-11.5T480-580v-40q0-17-11.5-28.5T440-660h-80v200Zm40-120v-40h40v40h-40Zm120 120h80q17 0 28.5-11.5T640-500v-120q0-17-11.5-28.5T600-660h-80v200Zm40-40v-120h40v120h-40Zm120 40h40v-80h40v-40h-40v-40h40v-40h-80v200ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
                     <p className='text-sm'>Technologies Used</p>
                     <div className='flex flex-wrap p-1  text-sm '>
                     
@@ -164,21 +164,8 @@ Acknowledging that the tech landscape evolves, I've committed to updating my por
                     </div>
                       <p className='relative left-2'>Description : Used all above tech stack to perform pdf merge operation via express.</p>
               </div>
-              <div className='w-1/3 bg-white text-black shadow-2xl shadow-black border-slate-500 border-2 rounded-xl p-4  m-2 max-sm:w-full'>
-                  <p className='text-md text-center'>Data Analysis</p>
-                   <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45px"  fill='#000'><path d="M120-120v-80l80-80v160h-80Zm160 0v-240l80-80v320h-80Zm160 0v-320l80 81v239h-80Zm160 0v-239l80-80v319h-80Zm160 0v-400l80-80v480h-80ZM120-327v-113l280-280 160 160 280-280v113L560-447 400-607 120-327Z"/></svg>
-                    <p className='text-sm '>Technologies Used</p>
-                    <div className='flex flex-wrap p-1  '>
-                    
-                    <p className='bg-green-200 rounded-xl p-1 m-1'>Python</p>
-                    <p className='bg-green-200 rounded-xl p-1 m-1'>Matplotlib</p>
-                    <p className='bg-green-200 rounded-xl p-1 m-1'>pandas</p>
-                   
-                    
-                    </div>
-                      <p>Description</p>
-              </div>
-              <div className='w-1/6 bg-white  border-slate-500 shadow-2xl shadow-black border-2 rounded-xl p-4  m-2 max-sm:w-full '>
+             
+              <div className='w-1/3 bg-white  border-slate-500 shadow-2xl shadow-black border-2 rounded-xl p-4  m-2 max-sm:w-full '>
                   <p className='text-md text-center'>Weather App</p>
                     <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill='#000'><path d="M500-40q-25 0-42.5-17T440-99q0-12 4.5-23t13.5-19l42-39 42 39q9 8 13.5 19t4.5 23q0 25-17.5 42T500-40Zm-138-60-42-42 118-118 42 42-118 118Zm258-60-60-60 60-60 60 60-60 60Zm-360 0-60-60 60-60 60 60-60 60Zm40-160q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/></svg>
                     <p className='text-sm'>Technologies Used</p>
@@ -191,6 +178,20 @@ Acknowledging that the tech landscape evolves, I've committed to updating my por
                     
                     </div>
                       <p>Description : Used Api to Fetch the data and using react to show data on front end. a complete user based experience via its own location weather</p>
+              </div>
+               <div className='w-1/6 bg-white text-black shadow-2xl shadow-black border-slate-500 border-2 rounded-xl p-4  m-2 max-sm:w-full'>
+                  <p className='text-md text-center'>Data Analysis</p>
+                   <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45px"  fill='#000'><path d="M120-120v-80l80-80v160h-80Zm160 0v-240l80-80v320h-80Zm160 0v-320l80 81v239h-80Zm160 0v-239l80-80v319h-80Zm160 0v-400l80-80v480h-80ZM120-327v-113l280-280 160 160 280-280v113L560-447 400-607 120-327Z"/></svg>
+                    <p className='text-sm '>Technologies Used</p>
+                    <div className='flex flex-wrap p-1  '>
+                    
+                    <p className='bg-green-200 rounded-xl p-1 m-1'>Python</p>
+                    <p className='bg-green-200 rounded-xl p-1 m-1'>Matplotlib</p>
+                    <p className='bg-green-200 rounded-xl p-1 m-1'>pandas</p>
+                   
+                    
+                    </div>
+                      <p>Key Work : Reading the csv file from local, That constains the data of the company about manufacturing SKU's and this project give them the data analysis of the produts and help to make future decision</p>
               </div>
               
              
