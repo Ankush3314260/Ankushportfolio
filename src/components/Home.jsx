@@ -68,7 +68,7 @@ function Home(){
                      </div>
                     <div className="sm:w-1/3 max-sm:w-full  max-sm:overflow-visible  flex relative -right-0 max-sm:m-auto     ">
                          <div className=" " >
-                              <img  className="max-sm:w-max relative max-sm:top-16 sm:-top-6" src="homeimage.jpg" alt="" srcSet="" />
+                              <img  className="max-sm:w-max relative max-sm:top-16 sm:-top-6" src="src/homeimage.jpg" alt="" srcSet="" />
                            
                                 
                           </div>
