@@ -3,9 +3,15 @@ import React,{useEffect} from "react"
 
 
 function Home(){
-        
+     const sendmail =()=>{
+          
+          let to="ankushsingh3314260@gmail.com"
+          let subject="Thanks For Reaching"
+          let maillink ="mailto:"+to+"?subject="+encodeURIComponent(subject)
+          window.location.href=maillink
+     }
          useEffect(()=>{
-            
+              
          
              setTimeout(()=>{
                   document.querySelector('#faded').style.opacity=1
@@ -63,7 +69,7 @@ function Home(){
 
                         <a href="https://www.instagram.com/i_ankush_13?igsh=MW9uZnR0dnN3NGgyYg==" target="_blank" rel="noopener noreferrer">   <svg className="hover:shadow-sh21 hover:shadow-black hover:rounded-lg hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px" fill="#000"><path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"/></svg></a>
                            </div>
-                           <button className="p-2 w-36 bg-black text-white shadow-black shadow-lg rounded-full  max-sm:p-2 relative m-3  "> <a href="mailto:ankushsingh3314260@gmail?subject=Thanks%20For%20Reaching" className="">HIRE ME</a></button>
+                           <button className="p-2 w-36 bg-black text-white shadow-black shadow-lg rounded-full  max-sm:p-2 relative m-3  " onClick={sendmail}> <a>HIRE ME</a></button>
                         
                      </div>
                     <div className="sm:w-1/3 max-sm:w-full  max-sm:overflow-visible  flex relative -right-0 max-sm:m-auto     ">

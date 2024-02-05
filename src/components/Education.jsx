@@ -6,9 +6,9 @@ function Education() {
   return (
     <>
           
-      <div className='absolute -top-20 max-sm:-top-10 -left-0 max-sm:-left-10 max-sm:w-full max-sm:overflow-hidden  w-full sm:overflow-hidden    -z-30  '>
+      <div className='absolute -top-20 max-sm:-top-10 -left-0 max-sm:-left-10 max-sm:w-full max-sm:overflow-hidden  w-full    -z-30  '>
         
-<svg className='max-sm:relative sm:hidden max-sm:-left-10   ' xmlns="http://www.w3.org/2000/svg" version="1.0" width="600px" height="600px" viewBox="0 0 1089.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
+<svg className='max-sm:relative max-sm:-left-10   ' xmlns="http://www.w3.org/2000/svg" version="1.0" width="600px" height="600px" viewBox="0 0 1089.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
 <path d="M2062 12784 c-69 -35 -88 -96 -66 -211 12 -65 13 -91 4 -125 -13 -46 -53 -109 -94 -147 -49 -46 -26 -42 87 16 187 95 250 173 251 307 0 74 -14 115 -52 149 -29 26 -90 31 -130 11z"/>
