@@ -98,7 +98,7 @@ function About() {
        
         
          
-          <img src="src/myphoto2.jpg" alt="" className='w-48 relative rounded-full top-4 max-sm:ml-8 max-h-48  m-2 mr-10  sp  ' />
+          <img src="/myphoto2.jpg" alt="" className='w-48 relative rounded-full top-4 max-sm:ml-8 max-h-48  m-2 mr-10  sp  ' />
           
       
           <div className='float-end flex w-1/2 max-sm:w-full max-sm:m-3 flex-wrap relative mt-2 '>
