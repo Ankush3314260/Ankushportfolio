@@ -42,7 +42,7 @@ function Education() {
         <div className=' absolute  w-full justify-evenly  flex flex-wrap  -z-20  top-20 sm:top-36 text-black'>
      
     
-     <div className='leftside    max-sm:w-full max-sm:m-auto m-2 max-w-80  bg-white rounded-xl  bg-white/5 backdrop-blur-sm  shadow-2xl shadow-black   '>
+     <div className='leftside    max-sm:w-full max-sm:m-auto m-2 max-w-80  bg-white rounded-xl  backdrop-blur-sm  shadow-2xl shadow-black   '>
              <div className=''>
               <img className='rounded-es-full border-white    max-sm:m-auto sm:m-auto size-fit' src="https://1.bp.blogspot.com/-62Ur3f334y0/YC-08lHMKbI/AAAAAAAAPQE/qOT5MKYm3HINb9jyRiD4VOZYZIef25LnQCLcBGAsYHQ/s953/mdu%2Bpic.PNG" width="250px" alt="mdu_image"  />
                 <p className='text-xl font-medium left-2 relative'>MDU ROHTAK</p>
