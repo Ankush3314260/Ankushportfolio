@@ -19,7 +19,7 @@ function Home(){
          },[])
     return (
         <> 
-        <div className="absolute  -z-10  max-sm:-top-72  -top-60   max-sm:w-full sm:-left-96  max-sm:overflow-hidden  ">
+        <div className="absolute  -z-10  max-sm:-top-60 max-sm:-left-2   -top-60   max-sm:w-full sm:-left-96  max-sm:overflow-hidden  ">
       
         <svg  xmlns="http://www.w3.org/2000/svg" version="1.0" width="1040px" height="640px" viewBox="0 0 1280.000000 640.000000" preserveAspectRatio="xMidYMid meet">
 

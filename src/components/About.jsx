@@ -90,7 +90,7 @@ function About() {
 </svg>
 </div>
     <div className='z-10 relative top-10 justify-evenly  w-full flex-wrap max-sm:-top-3   flex text-black' >
-      <div className='w-1/2 max-sm:w-full bg-white/5 backdrop-blur-sm downside    max-sm:m-6 sm:max-h-fit  rounded-xl shadow-2xl shadow-slate-600   border-2   '>
+      <div className='w-1/2 max-sm:w-full bg-white max-sm:bg-white/5 max-sm:backdrop-blur-sm downside    max-sm:m-6 sm:max-h-fit  rounded-xl shadow-2xl shadow-slate-600   border-2   '>
         <div className='relative top-2'>
          <p className=' text-center text-3xl text-black font-semibold'>ABOUT</p>
          </div>
