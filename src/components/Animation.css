@@ -25,12 +25,13 @@ body{
 /*  */
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+
 #faded{
    
     transform: translateY(10px);
     transition:  ease-out;
-    transition-duration: 2s;
-    animation: drop 2s ;
+    transition-duration: 1s;
+    animation: drop 1s ;
 
 }
 @keyframes drop{
@@ -56,10 +57,37 @@ body{
     }
 }
 
-
+.wards{
+    animation: dows 5s alternate  infinite ;
+   
+}
+@keyframes dows{
+    0%{
+        rotate: -45deg;
+        transform:translateX(0%);
+    }
+    100%{
+        rotate: -45deg;
+        transform: translateX(-5%);
+    }
+}
+.wardq{
+    animation: dowsq 5s alternate  infinite ;
+   
+}
+@keyframes dowsq{
+    0%{
+        rotate: -45deg;
+        transform:translateX(0%);
+    }
+    100%{
+        rotate: -45deg;
+        transform: translateX(5%);
+    }
+}
 /* SKILL///////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .skill{
- transform: translateX(10px);
+ transform: translateX(0px);
  transition: 1s ease-in-out;
  animation: skills 1s;
 }
@@ -68,7 +96,7 @@ body{
         transform: translateX(-100%);
     }
     100%{
-        transform: translateX(10px);
+        transform: translateX(0px);
     }
 }
 .projects{
@@ -92,6 +120,13 @@ body::-webkit-scrollbar {
   
 }
 
+#svg1{
+    fill: currentColor;
+        height: auto;
+        max-width: 66vmin;
+        transform-origin: center;
+        width: 30%;
+}
 .minor{
     opacity: 1;
     transform: translateY(50px);
@@ -110,7 +145,17 @@ body::-webkit-scrollbar {
     }
 }
 /* EDICATION ////////////////////////////////////////////////////////////////////////////// */
-
+.opac{
+    animation: opacc 2s;
+}
+@keyframes opacc{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
 .leftside{
     
   
@@ -166,6 +211,10 @@ body::-webkit-scrollbar {
     
    z-index: -30;
 } 
+
+ 
+ 
+
 /* ABOUT//////////////////////////////////////////////////////////////////////////////////////// */
 
 

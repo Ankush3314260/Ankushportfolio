@@ -34,10 +34,25 @@ const Header =(props)=>{
                         <NavLink onClick={responss} to="/skills" className={({isActive})=>`rounded-xl hover:text-black hover:transition   hover:duration-1000 ${isActive?"bg-purple-500":""} p-2`}>Skills</NavLink>
                         <NavLink onClick={responss}  to="/education" className={({isActive})=>` transition-all duration-1000 ${isActive?"bg-yellow-300 rounded-xl":""} p-2`}>Education</NavLink>
                         <NavLink  onClick={responss} to="/about" className={({isActive})=>`transition duration-1000 ${isActive?"bg-green-300 rounded-xl":""} p-2`}>About</NavLink>
-                
-                       
-                       </ul>
-                       </div>
+                 </ul>
+                        
+                        <svg className="relative top-36 left-32  " id="svg1" viewBox="0 0 100 100" width="80" height="80">
+                        <defs>
+                          <path id="circle"
+                            d="
+                              M 50, 50
+                              m -37, 0
+                              a 37,37 0 1,1 74,0
+                              a 37,37 0 1,1 -74,0"/>
+                        </defs>
+                        <text fontSize="17">
+                          <textPath xlinkHref="#circle">
+                           ANKUSH KUMAR 🤍  @2024 
+                          </textPath>
+                        </text>
+                      </svg>
+                          
+                 </div>
                    <div  className="w-full p-3    flow-root flex-wrap sm:m-auto ">
                        <div className="float-left  flex-end flex space-x-1 mt-2 text-black">
                          <svg
@@ -53,18 +68,19 @@ const Header =(props)=>{
                             </svg>
                            <h1><b>Ankush</b> </h1>
                         </div>
-                       <div className="  float-end hover:cursor-pointer 0 lg:mr-16 ">
-                   <ul className="flex space-x-6 relative font-semiboldz   text-cyan-300  box-border  max-sm:hidden z-30">
-                        <NavLink to='' className={({isActive})=>`hover:text-white hover:shadow-custom hover:bg-cyan-300 flex space-x1 hover:transition   hover:duration-500 p-2 rounded-lg ${isActive?"bg-cyan-200 transition-all duration-1000":""} `}>
-                          <svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="45" fill="#000"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                       <div className=" z-50  float-end hover:cursor-pointer 0 lg:mr-16 ">
+                   <ul className="flex space-x-6 relative font-semiboldz     box-border  max-sm:hidden z-30">
+                        <NavLink to='' className={({isActive})=>`hover:text-white hover:shadow-md text-black font-semibold hover:shadow-black hover:bg-black flex space-x1 hover:transition-colors  hover:duration-1000 p-2 rounded-lg ${isActive?"bg-black text-white transition-all font-thin duration-1000":""} `}>
+
+                        Home
                          </NavLink>
             
-                        <NavLink to='/skills' className={({isActive})=>` hover:shadow-sh2 hover:bg-purple-500  hover:transition   hover:duration-500 p-2 rounded-lg  ${isActive?"bg-purple-300 text-white transition-all duration-1000":""}`}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="45px" fill="#"><path d="M0 0h24v24H0z" fill="none"/><path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/></svg></NavLink>
-                        <NavLink to="/education" className={({isActive})=>`  hover:shadow-sh1 hover:bg-yellow-300 hover:text-white  hover:transition   hover:duration-500 ${isActive?"bg-yellow-200 text-white transition-all duration-1000":""} p-2 rounded-lg `}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="45px" fill="#000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 1l-5 5v11l5-4.5V1zM1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5V6c-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6zm22 13.5V6c-.6-.45-1.25-.75-2-1v13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5v2c1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5v-1.1z"/></svg></NavLink>
-                        <NavLink to="/About" className={({isActive})=>`  hover:shadow-sh3 hover:bg-green-300 hover:text-white  hover:transition    hover:duration-500${isActive?"shadow-sh3 transition-all duration-1000 bg-green-200":""}  p-2 rounded-lg`}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="45px" fill="#000"><path d="M0 0h24v24H0z" fill="none"/><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                        <NavLink to='/skills' className={({isActive})=>`hover:text-white hover:shadow-md text-black font-semibold hover:shadow-black hover:bg-black flex space-x1 hover:transition-colors  hover:duration-1000 p-2 rounded-lg ${isActive?"bg-black text-white transition-all duration-1000":""}`}>Skills</NavLink>
+                        <NavLink to="/education" className={({isActive})=>` hover:text-white hover:shadow-md text-black font-semibold hover:shadow-black hover:bg-black flex space-x1 hover:transition-colors  hover:duration-1000 p-2 rounded-lg ${isActive?"bg-black text-white transition-all duration-1000":""} `}>Education</NavLink>
+                        <NavLink to="/About" className={({isActive})=>` hover:text-white hover:shadow-md text-black font-semibold hover:shadow-black hover:bg-black flex space-x1 hover:transition-colors  hover:duration-1000 p-2 rounded-lg ${isActive?"bg-black text-white transition-all duration-1000":""}`}>Contact
                         </NavLink>
                    </ul>
-                         <li  onClick={responss} className=" list-none sm:hidden -z-10   ">   <svg xmlns="http://www.w3.org/2000/svg"height="35" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z " fill="#000"/></svg> </li>
+                         <li  onClick={responss} className=" list-none sm:hidden z-40   ">   <svg xmlns="http://www.w3.org/2000/svg"height="35" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z " fill="#000"/></svg> </li>
                        </div>
                      
                    </div>
