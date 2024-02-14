@@ -32,7 +32,7 @@ function Home(){
                            <h1 className="text-6xl max-sm:text-5xl  font-bold w-11/12 text-center  im  ">I'M</h1>
                            <div  id="name" className="  text-8xl max-sm:text-6xl  max-sm:justify-center  max-sm:relative  font-bold w-11/12 text-center  flex flex-wrap justify-center "><p className="downside "> ANKUSH </p> <p className="leftside"> KUMAR</p> </div>
                        
-                           <div  className="max-sm:text-md relative m-2 text-xl max-sm:top-3 top-2  ">Profile  Summary:
+                           <div  className="max-sm:text-md relative  text-xl max-sm:top-3 top-2  ">Profile  Summary:
                             <p>Passionate about coding, and Software Development. Thrive in a dynamic development environment. Bringing fresh ideas and a strong work ethic to a forward-thinking organization.
                                 Let's connect! </p>
                            </div>
