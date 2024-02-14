@@ -2,7 +2,7 @@
 import React from 'react'
 
 function Education() {
-          
+         
   return (
     <>
         <div className='max-sm:w-full overflow-hidden relative top-10  flex flex-wrap m-auto justify-evenly max-sm:justify-center max-sm:top-0 w-11/12 '>

@@ -3,7 +3,8 @@ import React,{useEffect} from "react"
 import { ReactTyped } from "react-typed";
 
 function Home(){
-    
+         document.querySelector("body").style.overflowX="hidden"
+      
      const sendmail =()=>{
           
           let to="ankushsingh3314260@gmail.com"
@@ -13,7 +14,7 @@ function Home(){
      }
          useEffect(()=>{
               
-        
+            
              setTimeout(()=>{
                   document.querySelector('#faded').style.opacity=1
              },300)
@@ -47,7 +48,7 @@ function Home(){
      
       loop
     >
-      <input className="text-blue-300 outline-none " type="text" />
+      <input className="text-blue-300 outline-none max-sm:relative max-sm:left-10 " type="text" />
     </ReactTyped>
   </div>
                            <div  className="max-sm:text-md relative m-2 text-xl max-sm:top-3 top-2 ">Profile  Summary:
