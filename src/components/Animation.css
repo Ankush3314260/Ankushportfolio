@@ -115,10 +115,10 @@ body{
         transform: translateY(0%);
     }
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     width: 0px;
   
-}
+} */
 
 #svg1{
     fill: currentColor;
