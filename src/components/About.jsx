@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser'
 
 function About() {
     
-      emailjs.init(import.meta.env.VITE_MY_ID );
+      emailjs.init(import.meta.env.VITE_KEY);
     
   const [name ,setname ]=useState('')
   const [email ,setEmail ]=useState('')
@@ -30,22 +30,22 @@ function About() {
       };
      
       
-    //     emailjs.send(import.meta.env.VITE_SERVICE_ID,import.meta.env.VITE_TEMPLATE_ID, templateParams)
-    //     .then(function(response) {
+        emailjs.send(import.meta.env.VITE_SERVICE_KEY,import.meta.env.VITE_TEMPLATE_KEY, templateParams)
+        .then(function(response) {
           
-    //       e.target.value ="Message Sent !"
-    //    }, function(error) {
-    //    e.target.value="Trouble in Sending !"
-    // }).then(()=>{
-    //   setTimeout(()=>{
-    //     const form =document.querySelector('form')
-    //       form.reset()
-    //      e.target.value="REACH"
-    //      setEmail("")
-    //      setMessage('')
-    //      setname('')
-    //   },6000)
-    // });
+          e.target.value ="Message Sent !"
+       }, function(error) {
+       e.target.value="Trouble in Sending !"
+    }).then(()=>{
+      setTimeout(()=>{
+        const form =document.querySelector('form')
+          form.reset()
+         e.target.value="REACH"
+         setEmail("")
+         setMessage('')
+         setname('')
+      },3000)
+    });
 
      
     
