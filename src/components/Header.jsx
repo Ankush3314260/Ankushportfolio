@@ -84,7 +84,9 @@ const Header =(props)=>{
                        </div>
                      
                    </div>
-                     
+                     <div className="updatetag w-full bg-black text-center text-white  "> 
+                 <h1 className="animate-pulse p-2">THE WEBSITE CURRENTLY UNDER UPGRADATION THIS IS NOT  FINAL VERSION YET...</h1>
+               </div> 
                 </>
               )
 }
