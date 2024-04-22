@@ -1,92 +1,57 @@
-
-import React,{useRef,useLayoutEffect,} from "react";
+import {Link} from 'react-scroll'
 import './Animation.css';
-import {NavLink} from 'react-router-dom'
+import menuopen from './headerfunction';
+import gsap from 'gsap';
+import { useEffect } from 'react';
+   
 
 
-
-
-const Header =(props)=>{
-                  const navref =useRef()
-                   const icons =useRef()
-              let responss =()=>{
-                navref.current.classList.toggle('hidden')
-                
-                 icons.current.classList.toggle('animate-spin')
-                 
-              
-               
-              }
-             
-              
+const Header =()=>{
+   
+                     
+           
               return(
                 <>
 
-                <div className={`sidebar h-screen   z-50 shadow-lg sm:hidden fixed w-svw hidden bg-white/10 text-center backdrop-blur-sm `}ref={navref} >
-              
-                         <li className={`float-right list-none m-3 `} ref={icons} onClick={responss}>
-                         <svg xmlns="http://www.w3.org/2000/svg" height="30"  viewBox="0 -960 960 960" width="30" fill="#000" ><path d="M424-80q-51 0-77.5-30.5T320-180q0-26 11.5-50.5T367-271q22-14 35.5-36t18.5-47l-12-6q-6-3-11-7l-92 33q-17 6-33 10t-33 4q-63 0-111.5-55T80-536q0-51 30.5-77.5T179-640q26 0 51 11.5t41 35.5q14 22 36 35.5t47 18.5l6-12q3-6 7-11l-33-92q-6-17-10-33t-4-32q0-64 55-112.5T536-880q51 0 77.5 30.5T640-781q0 26-11.5 51T593-689q-22 14-35.5 36T539-606l12 6q6 3 11 7l92-34q17-6 32.5-9.5T719-640q81 0 121 67t40 149q0 51-32 77.5T777-320q-25 0-48.5-11.5T689-367q-14-22-36-35.5T606-421l-6 12q-3 6-7 11l33 92q6 16 10 30.5t4 30.5q1 65-54 115T424-80Zm56-340q25 0 42.5-17.5T540-480q0-25-17.5-42.5T480-540q-25 0-42.5 17.5T420-480q0 25 17.5 42.5T480-420Zm-46-192q6-2 12.5-3.5T459-618q8-42 30.5-78t59.5-60q5-4 8-10t3-15q0-8-6-13.5t-18-5.5q-38 0-86 16.5T400-719q0 9 2.5 17t4.5 15l27 75ZM240-400q14 0 33-7l75-27q-2-6-3.5-12.5T342-459q-42-8-78-30.5T204-549q-4-5-10.5-8t-14.5-3q-9 0-14 6t-5 18q0 54 20.5 95t59.5 41Zm184 240q47 0 92.5-19t43.5-66q0-8-2.5-15t-4.5-13l-27-75q-6 2-12.5 3.5T501-342q-8 42-30.5 78T411-204q-5 4-8.5 10.5T400-180q1 8 6 14t18 6Zm353-240q9 0 16-5t7-19q0-38-16-86.5T719-560q-9 0-17 2t-15 4l-75 28q2 6 3.5 12.5T618-501q42 8 78 30.5t60 59.5q3 5 9 8t12 3ZM618-501ZM459-618ZM342-459Zm159 117Z"/></svg>
-                         </li>
-                       <ul  className="flex  flex-wrap flex-col  text-black relative top-20 left-7 rounded-xl  p-10 border-2  ">
-                       
-                        <NavLink  onClick={responss} to="/" className={({isActive})=>`hover:bg-cyan-300    text-black transition rounded-xl  p-2 ${isActive?"bg-cyan-300":""}`}>
-                           Home</NavLink>
-                        <NavLink onClick={responss} to="/skills" className={({isActive})=>`rounded-xl hover:text-black hover:transition   hover:duration-1000 ${isActive?"bg-purple-500":""} p-2`}>Skills</NavLink>
-                        <NavLink onClick={responss}  to="/education" className={({isActive})=>` transition-all duration-1000 ${isActive?"bg-yellow-300 rounded-xl":""} p-2`}>Education</NavLink>
-                        <NavLink  onClick={responss} to="/about" className={({isActive})=>`transition duration-1000 ${isActive?"bg-green-300 rounded-xl":""} p-2`}>About</NavLink>
-                 </ul>
-                        
-                        <svg className="relative top-36 left-32  " id="svg1" viewBox="0 0 100 100" width="80" height="80">
-                        <defs>
-                          <path id="circle"
-                            d="
-                              M 50, 50
-                              m -37, 0
-                              a 37,37 0 1,1 74,0
-                              a 37,37 0 1,1 -74,0"/>
-                        </defs>
-                        <text fontSize="17">
-                          <textPath xlinkHref="#circle">
-                           ANKUSH KUMAR 🤍  @2024 
-                          </textPath>
-                        </text>
-                      </svg>
-                          
-                 </div>
-                   <div  className="w-full p-3    flow-root flex-wrap sm:m-auto ">
-                       <div className="float-left  flex-end flex space-x-1 mt-2 text-black">
-                         <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              className="h-5 w-5">
-                              <path
-                                strokeLinecap="round"
-                                d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
-                            </svg>
-                           <h1><b>Ankush</b> </h1>
+                 <div id='navbar' className=' bg-white w-full  h-full nonactivee -translate-y-full   absolute max-sm:overflow-x-hidden  '>
+                
+                      <div id='navcontent' className='h-5/6 shadow-2xl rounded-xl  w-full bg-white   '>
+                        <div className='imagepng  sm:w-1/2 max-sm:hidden  absolute top-24 p-2'>
+                          <img className='w-1/2 m-auto' src="https://res.cloudinary.com/dfntazqum/image/upload/v1713762459/wfaekkk7h5xyhtt3wjh6.png" alt=""  />
                         </div>
-                       <div className=" z-50  float-end hover:cursor-pointer 0 lg:mr-16 ">
-                   <ul className="flex space-x-6 relative font-semiboldz     box-border  max-sm:hidden z-30">
-                        <NavLink to='' className={({isActive})=>`hover:text-white hover:shadow-md text-black font-semibold hover:shadow-black hover:bg-black flex space-x1 hover:transition-colors  hover:duration-1000 p-2 rounded-lg ${isActive?"bg-black text-white transition-all font-thin duration-1000":""} `}>
+                          <div  className='sm:float-end relative  sm:right-80 sm:top-36 max-sm:top-24 max-sm:relative max-sm:left-10  '>
+                                 <ul className='list  text-2xl max-sm:text-xl  '>
+                                    <Link to="Home" smooth={true} duration={1500} className=' p-1 hover:cursor-pointer inline-block hover:opacity-50'onClick={menuopen} >Home</Link>
+                                    <br />
+                                    <Link to="skillsection" smooth={true} duration={1500} className=' p-1 inline-block sm:mt-1 hover:cursor-pointer hover:opacity-50' onClick={menuopen}>TechStack</Link>
+                                    <br />
+                                    <Link to="education" smooth={true} duration={1500} className=' p-1 inline-block sm:mt-1 hover:cursor-pointer hover:opacity-50' onClick={menuopen}>Accomplishment</Link>
+                                    <br />
+                                    <Link to="footer" smooth={true} className=' p-1 inline-block sm:mt-1 hover:cursor-pointer hover:opacity-50 ' onClick={menuopen}>Contact</Link>
+                                 </ul>
+                              
+                          </div>
+                          <p className='w-11/12 k m-auto sm:hidden relative top-60 text-center'>&copy;AK2024 All Rights Reserved</p>
+                      </div>
+                      <div id='extra' className='title h-2/6 w-full extra_nonactive overflow-hidden flex transition-all      '>
 
-                        Home
-                         </NavLink>
-            
-                        <NavLink to='/skills' className={({isActive})=>`hover:text-white hover:shadow-md text-black font-semibold hover:shadow-black hover:bg-black flex space-x1 hover:transition-colors  hover:duration-1000 p-2 rounded-lg ${isActive?"bg-black text-white transition-all duration-1000":""}`}>Skills</NavLink>
-                        <NavLink to="/education" className={({isActive})=>` hover:text-white hover:shadow-md text-black font-semibold hover:shadow-black hover:bg-black flex space-x1 hover:transition-colors  hover:duration-1000 p-2 rounded-lg ${isActive?"bg-black text-white transition-all duration-1000":""} `}>Education</NavLink>
-                        <NavLink to="/About" className={({isActive})=>` hover:text-white hover:shadow-md text-black font-semibold hover:shadow-black hover:bg-black flex space-x1 hover:transition-colors  hover:duration-1000 p-2 rounded-lg ${isActive?"bg-black text-white transition-all duration-1000":""}`}>Contact
-                        </NavLink>
-                   </ul>
-                         <li  onClick={responss} className=" list-none sm:hidden z-40   ">   <svg xmlns="http://www.w3.org/2000/svg"height="35" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z " fill="#000"/></svg> </li>
-                       </div>
+            <h1  className=' relative bottom-20  w-1/2 max-sm:hidden  flex'>
+              <span className=' max-sm:hidden'> &copy;AK</span>
+              <p className='max-sm:hidden sm:visible'>2024</p>
+          </h1>
+<div  className='w-1/2 max-sm:w-full relative top-2 sm:opacity-90 flex flex-wrap justify-evenly'>
+<svg className='max-sm:w-10' xmlns="http://www.w3.org/2000/svg"  fill="#000000" width="70px" height="70px" viewBox="0 0 32 32" version="1.1">
+<path d="M17.313 14.789h-2.809c0 2.422-0.011 4.829-0.011 7.254 0.033 0.329 0.051 0.712 0.051 1.099 0 0.81-0.081 1.601-0.236 2.365l0.013-0.076c-0.412 0.861-1.475 0.751-1.957 0.6-0.451-0.242-0.808-0.609-1.031-1.055l-0.006-0.014c-0.044-0.094-0.097-0.174-0.16-0.246l0.001 0.001-2.281 1.406c0.367 0.79 0.934 1.434 1.637 1.885l0.018 0.011c0.763 0.427 1.675 0.678 2.645 0.678 0.484 0 0.954-0.063 1.401-0.18l-0.038 0.009c0.988-0.248 1.793-0.89 2.254-1.744l0.009-0.019c0.359-0.914 0.566-1.973 0.566-3.080 0-0.388-0.026-0.77-0.075-1.145l0.005 0.044c0.015-2.567 0-5.135 0-7.722zM28.539 23.843c-0.219-1.368-1.11-2.518-3.753-3.59-0.92-0.431-1.942-0.731-2.246-1.425-0.063-0.158-0.099-0.341-0.099-0.532 0-0.124 0.015-0.244 0.044-0.359l-0.002 0.010c0.208-0.55 0.731-0.935 1.343-0.935 0.199 0 0.388 0.040 0.559 0.113l-0.009-0.004c0.552 0.19 0.988 0.594 1.215 1.112l0.005 0.013c1.292-0.845 1.292-0.845 2.193-1.406-0.216-0.369-0.459-0.689-0.734-0.977l0.002 0.002c-0.767-0.814-1.852-1.32-3.056-1.32-0.171 0-0.34 0.010-0.505 0.030l0.020-0.002-0.881 0.111c-0.856 0.194-1.587 0.639-2.133 1.252l-0.003 0.004c-0.535 0.665-0.859 1.519-0.859 2.449 0 1.279 0.613 2.415 1.56 3.131l0.010 0.007c1.706 1.275 4.2 1.555 4.519 2.755 0.3 1.462-1.087 1.931-2.457 1.762-0.957-0.218-1.741-0.83-2.184-1.652l-0.009-0.017-2.287 1.313c0.269 0.536 0.607 0.994 1.011 1.385l0.001 0.001c2.174 2.194 7.61 2.082 8.586-1.255 0.113-0.364 0.178-0.782 0.178-1.215 0-0.3-0.031-0.593-0.091-0.875l0.005 0.028zM1.004 1.004h29.991v29.991h-29.991z"/>
+</svg>
+<svg className='max-sm:w-10'  xmlns="http://www.w3.org/2000/svg" height="70" viewBox="175.7 78 490.6 436.9" width="70"><g fill="#000000"><path d="m666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9v-22.3c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6v-22.3c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zm-101.4 106.7c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24s9.5 15.8 14.4 23.4zm73.9-208.1c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6s22.9-35.6 58.3-50.6c8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zm53.8 142.9c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6z"/><circle cx="420.9" cy="296.5" r="45.7"/></g></svg>
+<svg className='max-sm:w-10' xmlns="http://www.w3.org/2000/svg" fill="#000000" width="70px" height="70px" viewBox="0 0 24 24" role="img"><title>Tailwind CSS icon</title><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>
+<svg className='max-sm:w-10' xmlns="http://www.w3.org/2000/svg" fill="#000000" width="70px" height="70px" viewBox="0 0 32 32" version="1.1">
+<path d="M13.168 30.901c5.401 0.346 13.695-0.191 13.891-2.747 0 0-0.377 0.968-4.464 1.738-2.257 0.407-4.855 0.639-7.508 0.639-2.173 0-4.309-0.156-6.398-0.457l0.239 0.028c0-0.001 0.691 0.571 4.24 0.799zM19 1.004s3.117 3.117-2.955 7.91c-4.869 3.845-1.11 6.038-0.001 8.543-2.842-2.566-4.927-4.821-3.529-6.922 2.054-3.085 7.744-4.58 6.486-9.531zM22.393 22.978c5.627-2.924 3.025-5.735 1.21-5.355-0.249 0.047-0.465 0.107-0.674 0.182l0.030-0.009c0.119-0.167 0.283-0.296 0.474-0.369l0.007-0.002c3.593-1.263 6.356 3.725-1.16 5.701 0.046-0.041 0.084-0.090 0.111-0.145l0.001-0.003zM12.616 17.512s-5.451 1.295-1.929 1.764c0.948 0.078 2.052 0.122 3.166 0.122 1.424 0 2.831-0.073 4.218-0.214l-0.174 0.014c2.257-0.19 4.521-0.596 4.521-0.596-0.531 0.232-0.982 0.477-1.409 0.756l0.037-0.022c-5.535 1.456-16.228 0.779-13.149-0.71 1.357-0.703 2.963-1.115 4.665-1.115 0.019 0 0.038 0 0.057 0h-0.003zM25.16 26.627s0.849 0.699-0.933 1.238c-3.389 1.027-14.106 1.336-17.081 0.041-1.070-0.466 0.937-1.112 1.567-1.247 0.291-0.074 0.626-0.117 0.97-0.117 0.023 0 0.045 0 0.068 0.001l-0.003-0c-1.191-0.839-7.693 1.646-3.303 2.358 11.972 1.941 21.821-0.875 18.716-2.274zM17.395 15.344c0.314 0.377 0.505 0.868 0.505 1.402 0 0.719-0.346 1.358-0.88 1.759l-0.006 0.004s3.673-1.897 1.986-4.271c-1.576-2.214-2.784-3.314 3.758-7.108 0-0.001-10.267 2.563-5.363 8.214zM11.346 20.915s-1.285 0.951 0.677 1.155c0.859 0.108 1.852 0.169 2.86 0.169 1.826 0 3.605-0.202 5.315-0.585l-0.162 0.030c0.344 0.322 0.755 0.578 1.209 0.744l0.025 0.008c-7.097 2.076-15.004 0.162-9.925-1.522zM12.065 24.198s-1.146 0.667 0.816 0.892c0.719 0.107 1.548 0.168 2.392 0.168 1.354 0 2.671-0.157 3.934-0.455l-0.116 0.023c0.467 0.285 1.010 0.557 1.577 0.782l0.074 0.026c-5.872 2.516-13.287-0.147-8.676-1.436z"/>
+</svg>
+</div>
+</div>
+                 </div>
                      
-                   </div>
-                     <div className="updatetag w-full bg-black text-center text-white  "> 
-                 <h1 className="animate-pulse p-2">THE WEBSITE CURRENTLY UNDER UPGRADATION THIS IS NOT  FINAL VERSION YET...</h1>
-               </div> 
                 </>
               )
 }

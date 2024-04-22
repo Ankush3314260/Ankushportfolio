@@ -1,21 +1,78 @@
 
 /* HEADER||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+
 body{
    
-            font-family: "Poppins", sans-serif;
-            
-     
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+#hamburger{
+    z-index: 2000;
+  
+  
+  
+  
+}
+#hamburger span {
+  
+    transition: all;
+    transition-duration: 0.5s ;
+    background-color: black;
+
+}
+#hamburger.nonactive span{
+   background-color: white;
+}
+#hamburger.nonactive:hover span:nth-child(1){
+    transform: translateY(-3px);
+}
+#hamburger.nonactive:hover span:nth-child(2){
+   transform: translateY(3px);
 }
 
-.im{
-   filter: drop-shadow(black 2px 2px 2px);
+#navbar{
+  z-index: 200;
 }
+.list Link:hover{
+    opacity: 0.3;
+    cursor: pointer;
+    
+}
+.fr{
+    
+    background-size: cover;
+    
+}
+#skilltext{
+    font-size: 300px;
+    opacity: 0.2;
+    text-align: center;
+    width: 100%;
+}
+
+
+.homeimg:hover{
+    transition: all;
+    transition-duration: 1s;
+    margin-left: 0px;
+}
+.title{
+    font-family: "Jost", sans-serif;
+  font-weight: 400;
+  left: 50px;
+  font-size: 9.345rem;
  
-#name{
-    color: transparent;
-   -webkit-text-stroke: 2px black;
-   transition: background-color 0.5 ease;
 }
+
+
+
+
 
 ::selection{
      background-color: black;
@@ -24,16 +81,15 @@ body{
 
 /*  */
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-
-#faded{
-   
-    transform: translateY(10px);
-    transition:  ease-out;
-    transition-duration: 1s;
-    animation: drop 1s ;
-
+.grad{
+    
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,transparent,white 20%,white 80% ,transparent );
+    mask: linear-gradient(90deg,transparent,white 20% , white 80%, transparent);
 }
+
+
+
 @keyframes drop{
     0%{
         transform: translateY(0px);
@@ -43,19 +99,6 @@ body{
     }
 }
 
-.sidebar{
-    position: absolute;
-    transition: 1s ease-in-out;
-    animation: slide 1s ;
-}
-@keyframes slide {
-    0%{
-        left:-100%;
-    }
-    100%{
-        left:0%;
-    }
-}
 
 .wards{
     animation: dows 5s alternate  infinite ;
@@ -85,137 +128,26 @@ body{
         transform: translateX(5%);
     }
 }
-/* SKILL///////////////////////////////////////////////////////////////////////////////////////////////////////// */
-.skill{
- transform: translateX(0px);
- transition: 1s ease-in-out;
- animation: skills 1s;
-}
-@keyframes skills{
-    0%{
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
-.projects{
-    
-       transition: 1s ease-out;
-       opacity: 1;
-       animation:projects 1s;
-}
-@keyframes projects{
-    0%{
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-body::-webkit-scrollbar {
-    width: 0px;
-  
-}
 
-#svg1{
-    fill: currentColor;
-        height: auto;
-        max-width: 66vmin;
-        transform-origin: center;
-        width: 30%;
-}
-.minor{
-    opacity: 1;
-    transform: translateY(50px);
-    transition: 1s ease ;
-    animation: scrols 1s ;
+.loader {
+    width: 150px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: #FFF #0000;
+    animation: l1 1s infinite;
+  }
+  @media screen and (max-width:640px){
+    .loader{
+        width: 50px;
+        border-radius: 4px solid;
+        border-color: #FFF #0000;
+    }
+  }
+  @keyframes l1 {to{transform: rotate(.5turn)}}
 
-}
-@keyframes scrols{
-    0%{
-       
-        transform: translateY(0px);
-    }
-    100%{
-      
-        transform: translateY(50px);
-    }
-}
-/* EDICATION ////////////////////////////////////////////////////////////////////////////// */
-.opac{
-    animation: opacc 2s;
-}
-@keyframes opacc{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 100;
-    }
-}
-.leftside{
-    
-  
-    animation: lefts 1s;
-}
-@keyframes lefts {
-    0% {
-        transform: translateY(-100%);
-    }
+/* HTML: <div class="loader"></div> */
 
-    100% {
-        transform: translateY(0%);
-    }
-}
-.downside{
-    
-  
-    animation: upside 1s;
-}
-@keyframes upside{
-    0%{
-        transform: translateY(100%);
-    }
-    100%{
-        transform: translateY(0%);
-    }
-}
-.rightside{
-    
-    transition: 1s ease-in;
-    animation: rights 1s;
-}
-@keyframes rights{
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(0%);
-    }
-}
-
-.head{
-    position: absolute;
-   color: transparent;
-   -webkit-text-stroke: 2px white;
-   font-size: 200px ;
-   margin-left: 100px;
-    max-height:max-content;
-   top: 40%;
-   padding: 0;
-   display: block;
-  
-    
-   z-index: -30;
-} 
-
- 
- 
-
-/* ABOUT//////////////////////////////////////////////////////////////////////////////////////// */
-
-
-
+  .loaderr{
+    z-index: 3000;
+  }

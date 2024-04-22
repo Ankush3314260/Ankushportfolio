@@ -1,70 +1,123 @@
 
-import React from 'react'
-
+import React, {useEffect,useRef} from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 function Education() {
-         
-  return (
-    <>
-        <div className='max-sm:w-full overflow-hidden relative top-10  flex flex-wrap m-auto justify-evenly max-sm:justify-center max-sm:top-0 w-11/12 '>
-                 
-               
-                 <img className='downside relative max-h-80 max-w-  -z-10 max-sm:left-0 ' src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2022/7/2022_7$largeimg_446023561.jpg" width="400px" alt="mdu_image"  />
-              
-                 <div className=' skill p-2 w-3/5 m-1 max-sm:w-full '>
-               
-                  <div className='border-t-2 border-b-2 '>
-                   <p className='text-lg max-sm:text-sm float-right bg-new14 p-2 rounded-lg text-white'> 2023 - <i className='animate-pulse'>Present</i></p>
-                 <p className='sm:text-2xl max-sm:xl inline '>Maharshi Dayanand University</p>
-                 <br />
-                  <p className='text-xl max-sm:text-lg  inline'>Master's Of Computer Application</p>
-                 
-               </div>
-               <div className='border-t-2 border-b-2 mt-3 '>
-                   <p className='text-lg max-sm:text-sm float-right bg-new p-2 bg-new14 text-white rounded-lg '> 2020 - 2023</p>
-                 <p className='sm:text-2xl max-sm:xl mt-2 inline '>Maharshi Dayanand University</p>
-                  <p className='text-xl max-sm:text-lg  '> Bachelor of Computer Applications</p>
-                 </div>
-                 
-                </div>
-                
+    let fuse = useRef(null)
+    useEffect(()=>{
+      let temp = fuse.current
+      let mm =gsap.matchMedia()
+      mm.add("(max-width:640px)",()=>{
+        gsap.to('.textpin',{
+         rotate:"90deg",
 
-              
-            </div>    
-
-            <div className='relative top-12 max-sm:top-3 w-11/12 max-sm:w-full m-auto downside sm:border-t-2 '>
-              <h1 className='text-4xl  bg-new15  p-2 w-1/4 text-center max-sm:w-2/3 m-auto rounded-xl text-white max-sm:text-2xl mt-2'>Certifications</h1>
-              <div className='text-xl m-1'>
-                <p className='bg-new17 w-1/3 p-2 text-white max-sm:w-full text-center max-sm:text-lg' >Cognizant Agile Methodology Job Simulation on Forage - July 2023</p>
-                <ul className='m-auto  list-disc text-sm max-sm:w-11/12 '>
-                   <li>
-                     Demonstrated an understanding of key project management concepts by creating a comprehensive presentation analysing strengths and weaknesses of Agile and Waterfall methodologies
-                   </li>
-                   <li className='max-sm:hidden'>
-                   Applied knowledge of key aspects of Agile methodology by identifying user stories for an innovative interplanetary video-conferencing application and creating a document detailing Scrum role assignments and ceremonies.
-                   </li>
-                   <li >
-                    Showcased problem-solving skills by diagnosing and proposing solutions for development process issues encountered during sprints.
-                   </li>
-                </ul>
-              </div>
-              <div className='text-xl m-1'>
-                <p className='bg-new17 w-1/3 p-2 text-white max-sm:w-full text-center max-sm:text-lg' >Fiesta Event Coordinator 2023</p>
-                <ul className='m-auto  list-disc text-sm max-sm:w-11/12 '>
-                   <li>
-                    Feedback and Surveys: Collected feedback from attendees through surveys and feedback forms. Use that feedback to demonstrate attendee satisfaction, areas of improvement, and overall success.
-                   </li>
-                   <li >
-                   Social Media Engagement: Shared photos, videos, and stories from the event on social media platforms. Track engagement metrics such as likes, shares, and comments to demonstrated the reach and impact of the fiesta.
-                   </li>
-                   
-                </ul>
-              </div>
-            </div>
-     
-       
+         transform:"translateX(90px)",
+          scrollTrigger:{
+            trigger:'.mca',
+            // markers:{
+            //   startColor:"red",
+            //   endColor:"orange",
+            //   fontSize:"1rem"
+            // },
+            pin:".textpin",
+            pinSpacing:false,
+            scrub:true,
+            start:"top bottom",
+            end:"top 70%",
+            }
+  })
+      })
+  mm.add('(min-width:641px)',()=>{
     
-    </>
-  )
-}
+        gsap.to('.textpin',{
+          
+          scrollTrigger:{
+            trigger:temp,
+            // markers:{
+            //   startColor:"red",
+            //   endColor:"orange",
+            //   fontSize:"1rem"
+            // },
+            pin:".textpin",
+            pinSpacing:false,
+            scrub:true,
+            start:"top top",
+            end:"bottom bottom",
+            }
+  })
+  
+})
+    gsap.to('.mca',{
+      opacity:0,
+      scrollTrigger:{
+        trigger:'.mca',
+        // markers:{
+        //   startColor:"red",
+        //   endColor:"orange",
+        //   fontSize:"1rem"
+        // },
+        scrub:true,
+        start:"-300% top",
+        end:"bottom top",
+        }  
+    })
+    gsap.to('.bca',{
+      opacity:0,
+      scrollTrigger:{
+        trigger:'.bca',
+        // markers:{
+        //   startColor:"red",
+        //   endColor:"orange",
+        //   fontSize:"1rem"
+        // },
+        scrub:true,
+        start:"-50% top",
+        end:"bottom top",
+        }  
+    })
+    },[])
+return(
+  <>
+    <div className='bg-new1 overflow-hidden'>
+        <div id='education' ref={fuse} className='bg-new1 text-white shadow-2xl overflow-hidden'style={{height:'200vh'}}>
+      
+           <div className='textpin max-sm:-translate-y-32   text-8xl text-newDD relative sm:top-48 max-sm:top-28 p-4 sm:h-64 max-sm:text-5xl overflow-hidden max-sm:w-11/12  max-sm:newclass' >
+             EDUCATION
+           </div>
+           <div  className=' w-full  h-2/5 overflow-hidden   '>
+            <div className='text-center w-1/2  float-end h-72 max-sm:w-full '>
+           
+              <div className='w-3/5 m-auto bg-new2 max-sm:float-start h-full border-2 border-new3'>
+              <svg className='relative  -rotate-12 top-12 left-3 ' xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="70px" height="70px" viewBox="-4 0 32 32" version="1.1">
+<path d="M12.188 7.844l12.188 4.875-12.188 4.844-9.094-3.625c-0.563 0.469-0.969 1.219-1.031 2.063h0.219c0.25 0 0.438 0.188 0.438 0.438v1.156c0 0.25-0.188 0.438-0.438 0.438h-0.156l0.594 6.063c0.031 0.25-0.156 0.469-0.406 0.469h-1.094c-0.25 0-0.438-0.219-0.438-0.469l0.625-6.063h-0.156c-0.25 0-0.469-0.188-0.469-0.438v-1.156c0-0.25 0.219-0.438 0.469-0.438h0.344c0.063-0.906 0.469-1.688 1.031-2.25l-2.625-1.031zM11.844 18.438l0.344 0.125 0.344-0.125 6.688-2.688 0.5 5.531c0.031 0.375-0.219 0.531-0.563 0.375l-2.625-1.344c-0.344-0.188-0.906-0.156-1.219 0.031l-2.531 1.438c-0.313 0.188-0.875 0.188-1.188 0l-2.531-1.438c-0.313-0.188-0.875-0.219-1.188-0.031l-2.656 1.344c-0.344 0.188-0.594 0-0.563-0.375l0.5-5.531z"/>
+</svg>
+                <p className='text-5xl max-sm:text-4xl mca relative top-6 text-newDD'>MDU ROHTAK</p>
+                <p className='text-3xl max-sm:text-2xl mca relative top-6 ext-newDD'>Master of Computer Applications</p>
+                </div>
+            </div>
+           </div>
+           
+           <div className='bca w-full h-1/3 overflow-hidden '>
+           <div className='text-center w-1/2   float-end h-72 max-sm:w-full '>
+              <div className='w-3/5 m-auto bg-new2 h-full border-2 border-new3'>
+              <svg className='relative  -rotate-12 sm:top-12 sm:left-3 ' xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="70px" height="70px" viewBox="-4 0 32 32" version="1.1">
+<path d="M12.188 7.844l12.188 4.875-12.188 4.844-9.094-3.625c-0.563 0.469-0.969 1.219-1.031 2.063h0.219c0.25 0 0.438 0.188 0.438 0.438v1.156c0 0.25-0.188 0.438-0.438 0.438h-0.156l0.594 6.063c0.031 0.25-0.156 0.469-0.406 0.469h-1.094c-0.25 0-0.438-0.219-0.438-0.469l0.625-6.063h-0.156c-0.25 0-0.469-0.188-0.469-0.438v-1.156c0-0.25 0.219-0.438 0.469-0.438h0.344c0.063-0.906 0.469-1.688 1.031-2.25l-2.625-1.031zM11.844 18.438l0.344 0.125 0.344-0.125 6.688-2.688 0.5 5.531c0.031 0.375-0.219 0.531-0.563 0.375l-2.625-1.344c-0.344-0.188-0.906-0.156-1.219 0.031l-2.531 1.438c-0.313 0.188-0.875 0.188-1.188 0l-2.531-1.438c-0.313-0.188-0.875-0.219-1.188-0.031l-2.656 1.344c-0.344 0.188-0.594 0-0.563-0.375l0.5-5.531z"/>
+</svg>
+                <p className='text-5xl max-sm:text-4xl bca relative sm:top-6'>MDU ROHTAK</p>
+                <p className='text-3xl max-sm:text-2xl bca relative sm:top-6 '>Bachelor's of Computer Applications</p>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+  
+  </>
+)      
+};
+
+
+ 
+  
 
 export default Education
