@@ -108,7 +108,7 @@ export default function Footer() {
           </div>
          
          </div>
-         <div className='p-2 max-sm:p-1 max-sm:w-4/5 flex space-x-3 text-white max-sm:m-auto sm:w-max float-start'>
+         <div className='p-2 max-sm:p-1 max-sm:w-full flex space-x-3 text-white max-sm:m-auto sm:w-max float-start'>
           <form id='gmails' className=' sm:space-x-3'>
              <input className='bg-transparent border-b-2  decoration-none outline-none  max-sm:w-full max-sm:text-xs m-auto' type="email" onChange={setmail} name="email"  required placeholder='Yourmail3024@gmail.com' />
            <button id='submits' type="submit">
@@ -119,6 +119,7 @@ export default function Footer() {
 </form>
             
            </div>
+           <br />
            <br />
          <p className='text-white w-full text-center max-sm:text-xs '>&copy;copyright by AK All rights reserved 2024 🤍</p>
     </div>
