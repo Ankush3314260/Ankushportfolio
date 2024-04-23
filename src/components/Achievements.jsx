@@ -35,15 +35,15 @@ export default function Achievements() {
               duration:6,
               scrollTrigger:{
                 trigger:temp,
-               //  markers:{
-               //    startColor:"red",
-               //    endColor:"orange",
-               //    fontSize:"1rem"
-               //  },
+                markers:{
+                  startColor:"red",
+                  endColor:"orange",
+                  fontSize:"1rem"
+                },
                pin:temp3,
                 scrub:true,
                 start:"top top",
-                end:"bottom 90%",
+                end:"bottom 70%",
                 }
              })
              gsap.to('.certificate',{
