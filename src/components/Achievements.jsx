@@ -42,8 +42,8 @@ export default function Achievements() {
                 },
                pin:temp3,
                 scrub:true,
-                start:"top top",
-                end:"bottom 70%",
+               //  start:"top top",
+               //  end:"bottom 70%",
                 }
              })
              gsap.to('.certificate',{
