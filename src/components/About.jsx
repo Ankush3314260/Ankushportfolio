@@ -15,9 +15,12 @@ function About() {
            
             gsap.fromTo('.project1',{
               transform:"translateX(0%)",
+              opacity:1
              
             },{
-              transform:"translate(-200%)",
+              transform:"translate(-100%)",
+              duration:3,
+              opacity:0,
            
               scrollTrigger:{
                 trigger:temp,

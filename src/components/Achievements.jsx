@@ -32,7 +32,7 @@ export default function Achievements() {
              gsap.to('.newpin',{
               x:0,
               
-              duration:5,
+              duration:6,
               scrollTrigger:{
                 trigger:temp,
                //  markers:{
@@ -64,7 +64,7 @@ export default function Achievements() {
   return (
     <>
      <div>
-        <div ref={certificate} className='certificate bg-new1   overflow-hidden ' style={{height:'200vh'}}>
+        <div ref={certificate} className='certificate bg-new1   overflow-hidden ' style={{height:'100vh'}}>
              <div ref={pincertificate} className=' text-white'>
                      <p className='text-white w-full text-center text-7xl achievements max-sm:text-4xl relative top-2 '>Achievements</p>
              </div>

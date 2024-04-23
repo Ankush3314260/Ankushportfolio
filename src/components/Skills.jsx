@@ -98,7 +98,7 @@ function Skills() {
  
   return (
     <>
-     <div  ref={skill23} id='skillsection' className='w-screen h-screen bg-new1  overflow-hidden  transition-all duration-1000  '>
+     <div  ref={skill23} id='skillsection' className='w-screen  bg-new1  overflow-hidden  transition-all duration-1000  '>
      
       <p id='skilltext' className='relative  text-white max-sm:hidden overflow-hidden  p-0  '>SKILLS</p>
       <p className='w-full m-auto text-center text-white text-6xl sm:hidden overflow-hidden max-sm:relative max-sm:top-3'>SKILLS</p>
