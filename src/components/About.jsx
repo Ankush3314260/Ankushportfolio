@@ -14,26 +14,26 @@ function About() {
             mp.add('(max-width:640px)',()=>{
            
             gsap.fromTo('.project1',{
-              transform:"translateX(0%)",
+              duration:3,
               opacity:1
              
             },{
-              transform:"translate(-100%)",
+              transform:"translateX(-120%)",
               duration:3,
-              opacity:0,
+              opacity:1,
            
               scrollTrigger:{
                 trigger:temp,
                 pin:'.project1',
                 pinSpacing:false,
                 scrub:true,
-              //   markers:{
-              //   startColor:"blue",
-              //   endColor:"red",
-              //   fontSize:"1rem"
-              // },
+                markers:{
+                startColor:"blue",
+                endColor:"red",
+                fontSize:"1rem"
+              },
               start:"top 10%",
-              end:"50% bottom"
+              end:"50% 80%"
               },
             })
             
