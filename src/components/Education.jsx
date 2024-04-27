@@ -98,7 +98,7 @@ return(
             </div>
            </div>
            
-           <div className='bca w-full h-1/3 overflow-hidden  max-sm:relative top-10'>
+           <div className='bca w-full h-2/5 overflow-hidden  max-sm:relative top-20 '>
            <div className='text-center w-1/2   float-end h-72 max-sm:w-full '>
               <div className='w-3/5 m-auto bg-new2 h-full border-2 border-new3'>
               <svg className='relative  -rotate-12 sm:top-12 sm:left-3 ' xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="70px" height="70px" viewBox="-4 0 32 32" version="1.1">

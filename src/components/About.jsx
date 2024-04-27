@@ -18,7 +18,7 @@ function About() {
               opacity:1
              
             },{
-              transform:"translateX(-120%)",
+              transform:"translateX(-150%)",
               duration:3,
               opacity:1,
            
