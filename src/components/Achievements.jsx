@@ -25,7 +25,7 @@ export default function Achievements() {
                 pinSpacing:false,
                 scrub:true,
                 start:"top top",
-                end:"bottom 90%",
+                end:"bottom 70%",
                 }
     
              })

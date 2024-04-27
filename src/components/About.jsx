@@ -27,11 +27,11 @@ function About() {
                 pin:'.project1',
                 pinSpacing:false,
                 scrub:true,
-                markers:{
-                startColor:"blue",
-                endColor:"red",
-                fontSize:"1rem"
-              },
+              //   markers:{
+              //   startColor:"blue",
+              //   endColor:"red",
+              //   fontSize:"1rem"
+              // },
               start:"top 10%",
               end:"50% 80%"
               },
