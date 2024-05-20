@@ -24,7 +24,7 @@ function Education() {
             pinSpacing:false,
             scrub:true,
             start:"top bottom",
-            end:"top 70%",
+            end:"top 30%",
             }
   })
       })
@@ -79,8 +79,9 @@ function Education() {
     },[])
 return(
   <>
+
     <div className='bg-new1 overflow-hidden'>
-        <div id='education' ref={fuse} className='bg-new1 text-white shadow-2xl overflow-hidden'style={{height:'130vh'}}>
+        <div id='education' ref={fuse} className='bg-new1 text-white shadow-2xl overflow-hidden'style={{height:'300vh'}}>
       
            <div className='textpin max-sm:-translate-y-32   text-8xl text-newDD relative sm:top-48 max-sm:top-28 p-4 sm:h-64 max-sm:text-5xl overflow-hidden max-sm:w-11/12  max-sm:newclass' >
              EDUCATION

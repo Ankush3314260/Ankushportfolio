@@ -23,7 +23,7 @@ function Home(){
               //   fontSize:"1rem"
               // },
               scrub:true,
-              start:"-20% 60%",
+              start:"-10% 60%",
               end:"top top",
               trigger:"#education",
             }

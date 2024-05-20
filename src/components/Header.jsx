@@ -31,7 +31,7 @@ const Header =()=>{
                                  </ul>
                               
                           </div>
-                          <p className='w-11/12 k m-auto sm:hidden relative top-60 text-center'>&copy;AK2024 All Rights Reserved</p>
+                          <p className='w-11/12 k m-auto sm:hidden relative top-80 text-center'>&copy;AK2024 All Rights Reserved</p>
                       </div>
                       <div id='extra' className='title h-2/6 w-full extra_nonactive overflow-hidden flex transition-all      '>
 
