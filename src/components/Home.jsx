@@ -138,7 +138,7 @@ function Home(){
         <> 
        <Header/>
           
-         <div id="Home" ref={earth} className="frv h-screen w-screen bg-new1 overflow-hidden sm:bg-earthimage max-sm:bg-new12 imagecontain ">
+         <div id="Home" ref={earth} className="frv h-screen w-screen overflow-hidden bg-black max-sm:bg-new12 imagecontain ">
          <svg className="absolute overflow-hidden left-1 -top-3  transition-all duration-1000 sm:hidden " xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#E5E4E2" height="65px" width="65px" version="1.1" id="Layer_1" viewBox="0 0 512.853 512.853" xmlSpace="preserve">
 <g transform="translate(1 1)">
 	<g>

@@ -119,10 +119,10 @@ function About() {
             <br />
             <div className='  h-max text-newDD bg-new2 w-4/5 max-sm:w-11/12 m-auto p-1  overflow-hidden '>
               <p className='text-5xl max-sm:text-2xl'>Weather App</p>
-              <div className='bg-new2 p-2 max-sm:p-1'>
+              <div className='bg-new2 p-2 max-sm:p-2'>
                        <p className='text-3xl max-sm:text-xl p-2'>TechStack</p>
                        <div className=" ">
-                        <ul className='decoration-none flex sm:gap-5 flex-wrap '>
+                        <ul className='decoration-none flex sm:gap-5 flex-wrap gap-2'>
                         <li className='bg-white rounded-full p-2 text-black max-sm:text-xs' >Vite+React </li>
                          <li className='bg-white rounded-full p-2 text-black max-sm:text-xs'>TailwindCSS</li>
                          <li className='bg-white rounded-full p-2 text-black max-sm:text-xs'>JavaScript</li>

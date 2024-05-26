@@ -58,11 +58,6 @@ body{
 }
 
 
-.homeimg:hover{
-    transition: all;
-    transition-duration: 1s;
-    margin-left: 0px;
-}
 .title{
     font-family: "Jost", sans-serif;
   font-weight: 400;

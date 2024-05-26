@@ -2,6 +2,8 @@ import gsap from "gsap"
 export default function menuopen(){
     let active  =document.querySelector('#navbar')
     let imgw = document.querySelector('.imagepng')
+    let h =window.innerHeight
+   console.log(h);
     imgw.classList.toggle('rotates')
     active.classList.toggle('active')
     active.classList.toggle('nonactivee')
@@ -27,7 +29,7 @@ export default function menuopen(){
             ease:"expo.out"
          })
          gsap.to('.nonactivee',{
-            y:-650,
+            y:-h-10,
             duration:4,
             ease: "expo.out",
          })

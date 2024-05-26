@@ -11,7 +11,7 @@ function Education() {
       mm.add("(max-width:640px)",()=>{
         gsap.to('.textpin',{
          rotate:"90deg",
-
+         color:'#00DBFF',
          transform:"translateX(90px)",
           scrollTrigger:{
             trigger:'.mca',
@@ -31,7 +31,7 @@ function Education() {
   mm.add('(min-width:641px)',()=>{
     
         gsap.to('.textpin',{
-          
+          color:'#00DBFF',
           scrollTrigger:{
             trigger:temp,
             // markers:{
