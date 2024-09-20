@@ -3,13 +3,13 @@ import emailjs from '@emailjs/browser';
 function Lastscreen() {
   const [Email,setEmail]=useState('')
   const sendmail =()=>{
-    // emailjs.send(import.meta.env.VITE_SERVICE_KEY,import.meta.env.VITE_TEMPLATE_KEY,{
-    //   email:Email
-    // },import.meta.env.VITE_PUBLIC_KEY).then((res)=>{
-    //   console.log(res);
-    //   setEmail('')
-    // }).catch((error)=>{console.log(error);
-    // });
+    emailjs.send(import.meta.env.VITE_SERVICE_KEY,import.meta.env.VITE_TEMPLATE_KEY,{
+      email:Email
+    },import.meta.env.VITE_PUBLIC_KEY).then((res)=>{
+      console.log(res);
+      setEmail('')
+    }).catch((error)=>{console.log(error);
+    });
    
    setEmail('') 
   }
