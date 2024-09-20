@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Myfont';
+  src: url('/fonts/Aqem Regular.otf') format("truetype") ,
+       url('/fonts/Aqem Regular.ttf') format("truetype") ;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Myfont2';
+  src: url('/fonts/Segatha.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Myfont3';
+  src: url('/fonts/Bastliga One.ttf') format("truetype"),
+       url('/fonts/Bastliga One.otf')format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'university';
+  src: url('/fonts/University.otf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'copyright';
+  src: url('/fonts/Vonique64.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'btheone';
+  src: url('/fonts/ethnocentric rg.otf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'name';
+  src: url('/fonts/Cocomat Ultralight-trial.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", system-ui;
+  cursor: none;
+  background-color: #111111;
+  box-sizing: border-box;
+ scroll-behavior: smooth;
+ scrollbar-width: 0px;
+
+ 
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.slick-slide {
+  transition: transform 3s ease-in-out; /* Customize the duration and easing function here */
+}
+.custom-cursor{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  padding: 10px;
+  width: 25px;
+  background-color: white;
+  z-index: 99999;
+  height: 25px;
+
+}
+.cursor-text{
+  font-size: 5px;
+  font-weight: 900;
+  display: none;
+  letter-spacing: 1px;
+}
+a{
+  text-decoration: none;
+  cursor: none;
+  color: inherit;
+}
+
+
+
+
+.button-new {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+ 
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.button-new span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+  
+}
+
+.button-new span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+  
+}
+
+.button-new:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+ 
+}
+svg{
+  cursor: none;
+}
+
+.button-new:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+
+}
+
+.button-new:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+ transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+.rotates:hover .rotatesvg{
+   transform: rotate(180deg);
+}
+.text-wrapper{
+  mix-blend-mode: difference;
+}
+.navlink::after{
+  content: "";
+  position: absolute;
+  width: 0%;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #111111;
+  transition: width 0.4s ease-out;
+}
+.navlink:hover::after{
+  width: 100%;
+}
+
+input{
+  text-decoration: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.buttonsend {
+  display: flex;
+}
+
+.box {
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #000;
+  transition: all .8s;
+  /* cursor: pointer; */
+  position: relative;
+  background: white;
+  overflow: hidden;
+}
+
+.box:before {
+  content: "L";
+  position: absolute;
+  top: 0;
+  background: #0f0f0f;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform .4s;
+}
+
+.box:nth-child(2)::before {
+  transform: translateY(-100%);
+  content: 'O';
+}
+
+.box:nth-child(3)::before {
+  content: 'V';
+}
+
+.box:nth-child(4)::before {
+  transform: translateY(-100%);
+  content: 'E';
+}
+
+
+.buttonsend:hover .box:before {
+  transform: translateY(0);
+}
+:root{
+  --len: 242.776657104492px;
+ 
+}
+#outline {
+  stroke-dasharray: calc(var(--len) * 0.01), var(--len);
+  stroke-dashoffset: 0;
+  animation: anim 1.6s linear infinite;
+}
+
+@keyframes anim {
+  12.5% {
+    stroke-dasharray: calc(var(--len) * 0.14), var(--len);
+    stroke-dashoffset: calc(-1 * var(--len) * 0.11);
+  }
+  43.75% {
+    stroke-dasharray: calc(var(--len) * 0.35), var(--len);
+    stroke-dashoffset: calc(-1 * var(--len) * 0.35);
+  }
+  100% {
+    stroke-dasharray: calc(var(--len) * 0.01), var(--len);
+    stroke-dashoffset: calc(-1 * var(--len) * 0.99);
+  }
+}
+
+.scroll-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+  pointer-events: none;
+}
+.scroll-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
+  pointer-events: none;
+}
