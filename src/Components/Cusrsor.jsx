@@ -14,7 +14,7 @@ function Cusrsor() {
     const mouseenter = (event) => {
       const link = event.target;
       if (link.classList.contains("view")) {
-        console.log("dfgdfsssd");
+        // console.log("dfgdfsssd");
 
         gsap.to(cursor, { scale: 4 });
         cursorText.computedStyleMap.display = "block";
