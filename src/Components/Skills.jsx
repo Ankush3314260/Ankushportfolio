@@ -9,6 +9,7 @@ function Skills() {
       
     };
     useEffect(()=>{
+      
   let t1=gsap.timeline()
     const pinskillsection =skillpin.current
     const hscroll =horizontalscroll.current

@@ -45,6 +45,7 @@ function App() {
           <Helmet>
             <title>Ankush Portfolio | Parallax </title>
             <link rel="canonical" href="https://ankushportfolios.netlify.app" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <meta name="author" content="Ankush Kumar" />
             <meta
               name="description"

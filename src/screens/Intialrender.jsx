@@ -89,7 +89,7 @@ function Intialrender() {
             src="./Images/infinity-512.png"
             alt=""
           />
-          <div className="relative z-0 cursor-none text-[0.6em] ">
+          <div className="relative z-0  text-[0.6em] ">
             <div className=" font-btheone">
               <span
                 className="animateIT opacity-0"

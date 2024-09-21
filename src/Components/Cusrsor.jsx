@@ -34,7 +34,7 @@ function Cusrsor() {
   });
 
   return (
-    <div id="custom-cursor" className="custom-cursor">
+    <div id="custom-cursor" className="custom-cursor max-sm:hidden">
       <span className="cursor-text">view</span>
     </div>
   );

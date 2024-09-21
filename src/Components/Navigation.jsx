@@ -5,8 +5,8 @@ gsap.registerPlugin(ScrollTrigger);
 function Navigation({ closefunction }) {
 
   return (
-    <div className="min-h-screen bg-white text-[20vw] max-sm:text-[30vw] relative  z-[999999] max-sm:overflow-y-auto">
-      <div className="relative h-[80vh]  shadow-2xl  z-20">
+    <div className="min-h-screen  bg-white 0 text-[20vw] max-sm:text-[30vw] relative   ">
+      <div className="relative h-[80vh]  max-sm:[60vh] shadow-2xl  z-20">
         <div
           className="w-full h-full bg-white relative z-30 font-custom  "
         
@@ -31,18 +31,18 @@ function Navigation({ closefunction }) {
               <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
             </svg>
           </a>
-          <div className=" sm:float-end w-1/3 h-full sm:text-right sm:mr-10 max-sm:ml-8 max-sm:flex max-sm:items-center  ">
+          <div className=" sm:float-end w-1/3 h-full sm:text-right sm:mr-10 max-sm:ml-8 max-sm:flex max-sm:items-center   ">
             <div>
               <a
                 href="#"
-                className="text-[0.3em] max-sm:text-[0.6em] view relative  navlink block bg-white"
+                className="text-[0.3em] max-sm:text-[0.6em] view relative  navlink block    "
                 onClick={closefunction}
               >
                 Home
               </a>
               <a
                 href="#skills"
-                className="text-[0.3em] max-sm:text-[0.6em] view  relative navlink block "
+                className="text-[0.3em] max-sm:text-[0.6em] view  relative navlink block   "
                 onClick={closefunction}
               >
                 Skills

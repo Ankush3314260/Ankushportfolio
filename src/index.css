@@ -51,10 +51,10 @@ html{
 }
 body {
   font-family: "Poppins", system-ui;
-  cursor: none;
+  /* cursor: none; */
   background-color: #111111;
   box-sizing: border-box;
- scroll-behavior: smooth;
+ /* scroll-behavior: smooth; */
  scrollbar-width: 0px;
 
  
@@ -65,6 +65,7 @@ body {
 .slick-slide {
   transition: transform 3s ease-in-out; /* Customize the duration and easing function here */
 }
+
 .custom-cursor{
   position: fixed;
   top: 0;
@@ -90,8 +91,11 @@ body {
 }
 a{
   text-decoration: none;
-  cursor: none;
+  /* cursor: none; */
+  cursor: pointer;
   color: inherit;
+  pointer-events: auto; /* Ensure the link is clickable */
+  touch-action: auto; 
 }
 
 
@@ -153,7 +157,7 @@ a{
  
 }
 svg{
-  cursor: none;
+  /* cursor: none; */
 }
 
 .button-new:hover:after {
