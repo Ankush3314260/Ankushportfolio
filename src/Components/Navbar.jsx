@@ -13,38 +13,38 @@ function Navbar() {
   
 
   useEffect(() => {
-    function PreLoader() {
-      let array = [];
-      let array2 = [];
-      let loadedCount = 0;
-      for (let index = images.currentIndex; index <= images.maxIndex; index++) {
-        const url = `/Images/parts/frame_${(index + 1)
-          .toString()
-          .padStart(4, "0")}.jpeg`;
-        const img = new Image();
-        img.src = url;
-        img.alt = `frame_${index}`;
-        img.onload = () => {
-          loadedCount += 1;
-          if (loadedCount === images.maxIndex) {
-            setImagesLoaded(true); // Set the loaded state to true when all images are loaded
-            setImageArray(array);
-            setImageurl(array2);
-          }
-        };
-        array.push(
-          <img
-            className="w-full h-full"
-            key={index}
-            src={url}
-            alt={`frame_${index + 1}`}
-          />
-        );
-        array2.push(url);
-        // setImageArray([...ImageArray, img]);
-      }
-    }
-    PreLoader();
+    // function PreLoader() {
+    //   let array = [];
+    //   let array2 = [];
+    //   let loadedCount = 0;
+    //   for (let index = images.currentIndex; index <= images.maxIndex; index++) {
+    //     const url = `/Images/parts/frame_${(index + 1)
+    //       .toString()
+    //       .padStart(4, "0")}.jpeg`;
+    //     const img = new Image();
+    //     img.src = url;
+    //     img.alt = `frame_${index}`;
+    //     img.onload = () => {
+    //       loadedCount += 1;
+    //       if (loadedCount === images.maxIndex) {
+    //         setImagesLoaded(true); // Set the loaded state to true when all images are loaded
+    //         setImageArray(array);
+    //         setImageurl(array2);
+    //       }
+    //     };
+    //     array.push(
+    //       <img
+    //         className="w-full h-full"
+    //         key={index}
+    //         src={url}
+    //         alt={`frame_${index + 1}`}
+    //       />
+    //     );
+    //     array2.push(url);
+    //     // setImageArray([...ImageArray, img]);
+    //   }
+    // }
+    // PreLoader();
   }, []);
    
   useEffect(()=>{
