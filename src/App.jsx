@@ -14,7 +14,7 @@ import Loader from "./Components/Loader.jsx";
 function App() {
   
   const menucloseopen = () => {
-    console.log("sdsdd");
+    // console.log("sdsdd");
 
     if (
       document.querySelector(".toggle-container").classList.contains("open")
