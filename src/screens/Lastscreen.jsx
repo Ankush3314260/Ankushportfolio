@@ -26,7 +26,7 @@ function Lastscreen() {
         </h4>
         
         <div className="">
-          <form action="" className="text-[0.3em] flex items-center flex-wrap justify-center space-x-3">
+          <form  onSubmit={sendmail} className="text-[0.3em] flex items-center flex-wrap justify-center space-x-3">
           <label htmlFor="Email">Email : </label>
           <input
             className="w-3/5 h-[2.5em] max-sm:h-[2.5em] "
@@ -37,7 +37,7 @@ function Lastscreen() {
             required
             placeholder="example2430@gmail.com"
           />
-          <button className="p-2  mt-3 " type="submit" onClick={sendmail}>
+          <button className="p-2  mt-3 " type="submit" >
             <div className="buttonsend">
               <div className="box">S</div>
               <div className="box">E</div>
