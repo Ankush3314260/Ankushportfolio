@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import emailjs from '@emailjs/browser';
 function Lastscreen() {
   const [Email,setEmail]=useState('')
-  const sendmail =()=>{
+  const sendmail =(e)=>{
+    e.preventDefault()
     emailjs.send(import.meta.env.VITE_SERVICE_KEY,import.meta.env.VITE_TEMPLATE_KEY,{
       email:Email
     },import.meta.env.VITE_PUBLIC_KEY).then((res)=>{
@@ -10,6 +11,7 @@ function Lastscreen() {
       setEmail('')
     }).catch((error)=>{console.log(error);
     });
+   console.log("sent");
    
    setEmail('') 
   }
@@ -23,24 +25,29 @@ function Lastscreen() {
           I Love to here From you just write your Mail
         </h4>
         
-        <div className="text-[0.3em] flex items-center flex-wrap justify-center space-x-3">
+        <div className="">
+          <form action="" className="text-[0.3em] flex items-center flex-wrap justify-center space-x-3">
           <label htmlFor="Email">Email : </label>
           <input
-            className="w-3/5 h-[2em] max-sm:h-[2.5em]"
+            className="w-3/5 h-[2.5em] max-sm:h-[2.5em] "
             type="email"
             name="Email"
             onChange={(e)=>setEmail(e.target.value)}
             value={Email}
+            required
             placeholder="example2430@gmail.com"
           />
-          <div className="p-2" onClick={sendmail}>
+          <button className="p-2  mt-3 " type="submit" onClick={sendmail}>
             <div className="buttonsend">
               <div className="box">S</div>
               <div className="box">E</div>
               <div className="box">N</div>
               <div className="box">D</div>
             </div>
-          </div>
+          </button>
+          </form>
+          
+          
         </div>
         <br />
         <div className="flex items-center justify-center space-x-3">

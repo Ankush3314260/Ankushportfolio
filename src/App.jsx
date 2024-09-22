@@ -43,14 +43,14 @@ function App() {
      
        
           <Helmet>
-            <title>Ankush Portfolio | Parallax </title>
+            <title>Ankush Portfolio</title>
             <link rel="canonical" href="https://ankushportfolios.netlify.app" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <meta name="author" content="Ankush Kumar" />
             <meta
               name="description"
               content="
-    I'm Ankush Kumar, a Frontend Developer specializing in creating stunning parallax portfolio websites. My best portfolio website features dynamic, responsive designs that push the boundaries of web interaction. Recognized for its creativity and smooth user experience, my parallax portfolio is an Awwwards-worthy showcase of cutting-edge web design. Explore my work to see how I bring ideas to life with engaging, innovative digital experiences."
+    I'm Ankush Kumar, a Frontend Developer specializing in creating stunning parallax portfolio websites. Recognized for its creativity and smooth user experience, Explore my work to see how I bring ideas to life with engaging, innovative digital experiences."
             />
             <meta
               name="keyword"
