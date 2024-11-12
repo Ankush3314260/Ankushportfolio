@@ -135,24 +135,23 @@ function Projects() {
           <div className="w-3/5 border-l-[1px] border-white  max-sm:w-4/5  m-auto  bg-[#111111]  p-[0.5em]">
             <div className="w-full overflow-hidden ">
               <h3 className="fadedtext">
-                <span className="fadedtext">W</span>
+                <span className="fadedtext">N</span>
                 <span className="fadedtext">e</span>
-                <span className="fadedtext">a</span>
                 <span className="fadedtext">t</span>
-                <span className="fadedtext">h</span>
+                <span className="fadedtext">f</span>
+                <span className="fadedtext">i</span>
+                <span className="fadedtext">x</span>
+                <span className="fadedtext"> C</span>
+                <span className="fadedtext">l</span>
+                <span className="fadedtext">o</span>
+                <span className="fadedtext">n</span>
                 <span className="fadedtext">e</span>
-                <span className="fadedtext">r</span>
-                <span className="fadedtext"> A</span>
-                <span className="fadedtext">p</span>
-                <span className="fadedtext">p</span>
               </h3>
             </div>
             <div className="text-[0.4em] ">
               <p className="line-1 ">
                 {" "}
-                Overview: WeatherApp is a user-friendly, real-time weather
-                application designed to provide accurate and up-to-date weather
-                information for any location worldwide.
+                Overview: The lastest project with features like,infinite scrollling, search,advanced search etc
                 <br />
                 <br />
               </p>
@@ -161,11 +160,11 @@ function Projects() {
             
               <button className="line-2 rotates text-[0.3em]    ml-auto mr-0 block p-2 border-[1px] w-[30%] max-sm:w-[70%] border-white rounded-full ">
                 <a
-                  href="https://github.com/Ankush3314260/REACT_47/tree/main/Weather%20App"
+                  href="https://netfflixcloneproject.netlify.app"
                   target="_blank"
                   className="    flex justify-center items-center  "
                 >
-                  <span className=" block ">Visit Github</span>
+                  <span className=" block ">Live View</span>
 
                   <svg
                     className="text-[0.4em] w-[20%]  rotatesvg transition-all duration-500  "
