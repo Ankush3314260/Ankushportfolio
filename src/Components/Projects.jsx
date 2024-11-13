@@ -160,7 +160,7 @@ function Projects() {
             
               <button className="line-2 rotates text-[0.3em]    ml-auto mr-0 block p-2 border-[1px] w-[30%] max-sm:w-[70%] border-white rounded-full ">
                 <a
-                  href="https://netfflixcloneproject.netlify.app"
+                  href="https://ankushprojectmovie.netlify.app"
                   target="_blank"
                   className="    flex justify-center items-center  "
                 >
