@@ -97,7 +97,9 @@ a{
   pointer-events: auto; /* Ensure the link is clickable */
   touch-action: auto; 
 }
-
+.loader-container12{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
 
 
 

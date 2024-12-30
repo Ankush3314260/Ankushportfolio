@@ -12,7 +12,11 @@ import Lastscreen from "./screens/Lastscreen.jsx";
 import { Helmet } from "react-helmet";
 import Loader from "./Components/Loader.jsx";
 function App() {
-  
+  useEffect(()=>{
+    window.addEventListener(onload,()=>{
+      window.scrollTo(0,0)
+    })
+  },[])
   const menucloseopen = () => {
     // console.log("sdsdd");
 
@@ -28,6 +32,7 @@ function App() {
       document
         .querySelector(".menuslide")
         .classList.remove("-translate-y-full");
+       
     } else {
       document.querySelector(".bar1").style.transform = "rotate(0deg)";
       document.querySelector(".bar2").style.transform = "rotate(0deg)";
@@ -35,62 +40,59 @@ function App() {
       document.querySelector(".bar2").classList.replace("mt-0", "mt-2");
       document.querySelector(".toggle-container").classList.add("open");
       document.querySelector(".menuslide").classList.add("-translate-y-full");
+     
     }
   };
 
   return (
     <>
-     
-       
-          <Helmet>
-            <title>Ankush Portfolio</title>
-            <link rel="canonical" href="https://ankushportfolios.netlify.app" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <meta name="author" content="Ankush Kumar" />
-            <meta
-              name="description"
-              content="
+      <Helmet>
+        <title>Ankush Portfolio</title>
+        <link rel="canonical" href="https://ankushportfolios.netlify.app" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Ankush Kumar" />
+        <meta
+          name="description"
+          content="
     I'm Ankush Kumar, a Frontend Developer specializing in creating stunning parallax portfolio websites. Recognized for its creativity and smooth user experience, Explore my work to see how I bring ideas to life with engaging, innovative digital experiences."
-            />
-            <meta
-              name="keyword"
-              content="Awwwards-worthy,awwwards webiste, awwwards portfolio, awwwards example website, parallax design,parallax website, Ankush portfolio parallax, parallax website template, parallax portfolio design, best portfolio design, Ankush Kumar portfolio, awwwards portfolio design, modern web site, github portfolio, parallax portfolio github"
-            />
-          </Helmet>
-          <div className="bg-[#111111] mix-blend-difference">
-            <div
-              className="absolute  right-0 top-3  p-3  transition-all duration-300 z-[99999]"
-              onClick={menucloseopen}
-            >
-              <a
-                onClick={(e) => {
-                  e.preventDefault();
-                }}
-                className="view  w-[200px] relative z-50"
-              >
-                <div className="toggle-container open   mix-blend-difference ">
-                  <span className=" transition-all duration-300 block h-[2px] w-[2.1rem]   bg-white mix-blend-difference bar1"></span>
-                  <span className="transition-all duration-300 block h-[2px] w-[2.1rem] bg-white mix-blend-difference  mt-2  bar2"></span>
-                </div>
-              </a>
+        />
+        <meta
+          name="keyword"
+          content="Awwwards-worthy,awwwards webiste, awwwards portfolio, awwwards example website, parallax design,parallax website, Ankush portfolio parallax, parallax website template, parallax portfolio design, best portfolio design, Ankush Kumar portfolio, awwwards portfolio design, modern web site, github portfolio, parallax portfolio github"
+        />
+      </Helmet>
+      <div className="bg-[#111111] mix-blend-difference">
+        <div
+          className="absolute  right-0 top-3  p-3  transition-all duration-300 z-[99999]"
+          onClick={menucloseopen}
+        >
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+            className="view  w-[200px] relative z-50"
+          >
+            <div className="toggle-container open   mix-blend-difference ">
+              <span className=" transition-all duration-300 block h-[2px] w-[2.1rem]   bg-white mix-blend-difference bar1"></span>
+              <span className="transition-all duration-300 block h-[2px] w-[2.1rem] bg-white mix-blend-difference  mt-2  bar2"></span>
             </div>
+          </a>
+        </div>
 
-            <div className="transition-all duration-1000 ease-out w-full -translate-y-full menuslide   z-50 absolute  min-h-screen ">
-              <Navigation closefunction={menucloseopen} />
-            </div>
-            <div className="bg-[#111111]">
-              <Intialrender />
-              <Navbar />
-              <Experience />
-              <Skills />
-              <Education />
-              <Projects />
-              <About />
-              <Lastscreen />
-            </div>
-          </div>
-     
-    
+        <div className="transition-all duration-1000 ease-out w-full -translate-y-full menuslide overflow-hidden  z-50 absolute  min-h-screen ">
+          <Navigation closefunction={menucloseopen} />
+        </div>
+        <div className="bg-[#111111]">
+          <Intialrender />
+          <Navbar />
+          <Experience />
+          <Skills />
+          <Education />
+          <Projects />
+          <About />
+          <Lastscreen />
+        </div>
+      </div>
     </>
   );
 }

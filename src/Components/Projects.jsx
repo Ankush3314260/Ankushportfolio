@@ -289,7 +289,7 @@ function Projects() {
             
               <button className="line-22 rotates text-[0.3em]   ml-auto mr-0 block p-2 border-[1px] w-[30%] max-sm:w-[70%] border-black rounded-full ">
                 <a
-                  href="https://github.com/Ankush3314260/47pdf.com/tree/main/PROJECT"
+                  href="#"
                   target="_blank"
                   className="    flex justify-center items-center  "
                 >

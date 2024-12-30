@@ -48,18 +48,18 @@ function Navbar() {
   }, []);
    
   useEffect(()=>{
-         let container =colorchange.current
-         gsap.to(container, {
-          backgroundColor: '#111111',  // Change background color to black
-          ease: 'none',
-          scrollTrigger: {
-            trigger: container,      // Element that triggers the scroll
-            start: '20% 30%',        // Start animation when the top of container reaches the top of the viewport
-            end: 'bottom bottom',    // End animation when the bottom of container reaches the bottom of the viewport
-            scrub: true,   
-            // markers:true          // Smooth scrubbing for a smooth transition
-          },
-        });
+        //  let container =colorchange.current
+        //  gsap.to(container, {
+        //   backgroundColor: '#111111',  // Change background color to black
+        //   ease: 'none',
+        //   scrollTrigger: {
+        //     trigger: container,      // Element that triggers the scroll
+        //     start: '20% 30%',        // Start animation when the top of container reaches the top of the viewport
+        //     end: 'bottom bottom',    // End animation when the bottom of container reaches the bottom of the viewport
+        //     scrub: true,   
+        //     // markers:true          // Smooth scrubbing for a smooth transition
+        //   },
+        // });
   },[])
 
  
@@ -74,7 +74,7 @@ function Navbar() {
     <div>
       {ImageLoaded ? (
         <>
-          <div className="w-full   relative  left-0 min-h-[100vh] bg-[#FFFAF1] " ref={colorchange}>
+          <div className="w-full   relative  left-0 min-h-[100vh] bg-white " ref={colorchange}>
             <div className={` w-full min-h-screen   sticky top-0 left-0  z-10  overflow-x-hidden `}  >
               {/* <Canvas
                 images={imageUrl}
@@ -84,7 +84,7 @@ function Navbar() {
             </div>
             <div className="min-h-screen overflow-x-hidden">
           <div className={`" relative z-0 text-center h-[100vh]    w-[80%] m-auto`} >By The Way That Is An Incredible Journey</div>
-          <div className={`" relative z-0 text-center h-[100vh] text-[2em]  font-custom text-white`} >Animation Enthusiast</div>
+          <div className={`" relative z-0 text-center h-[100vh] text-[2em]  font-custom   `} >Animation Enthusiast</div>
           {/* <div className={`" relative z-0 text-center  text-white font-custom3 text-[4vw]` } > <span className="block font-mono relative left-3 text-[1.7em]">Yeah That's</span> <span className="text-[2.3em] block "> Ankush Kumar </span><br /><br /></div> */}
           </div>
           </div>

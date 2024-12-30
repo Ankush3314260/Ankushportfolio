@@ -10,57 +10,76 @@ function Intialrender() {
   const imgRef = useRef(null);
   const nameText = useRef(null);
 
-  const addAnimation = () => {
-    // Use refs instead of query selectors
-    const t1 = gsap.timeline();
-    t1.fromTo(
-      imgRef.current,
-      {
-        opacity: 0.3,
-        duration: 1,
-      },
-      {
-        opacity: 0.1,
-        duration: 2,
-      }
-    ).fromTo(
-      textRef.current,
-      {
-
-        opacity: 0,
-        duration: 1,
-        stagger:0.3
-      },
-      {
-    
-        opacity: 1,
-        duration: 1,
-        stagger:0.3
-      }
-    ).fromTo(nameText.current,{
-      opacity:0,
-      duration:2,
-    },{opacity:1,
-      duration:2
-    })
-  };
-
   useEffect(() => {
+    const addAnimation = () => {
+      // Use refs instead of query selectors
+
+      console.log("added");
+
+      const t1 = gsap.timeline({ delay: 0.5 });
+      t1.fromTo(
+        imgRef.current,
+        {
+          opacity: 0.3,
+          duration: 1,
+        },
+        {
+          opacity: 0.1,
+          duration: 2,
+        }
+      )
+        .fromTo(
+          textRef.current,
+          {
+            opacity: 0,
+            duration: 1,
+            stagger: 0.3,
+          },
+          {
+            opacity: 1,
+            duration: 1,
+            stagger: 0.3,
+          }
+        )
+        .fromTo(
+          nameText.current,
+          {
+            opacity: 0,
+            duration: 2,
+          },
+          { opacity: 1, duration: 2 }
+        );
+    };
+
     // Add overflow-hidden class when component mounts (to hide the scroll initially)
     document.body.classList.add("overflow-hidden");
 
     const onPageLoad = () => {
-     
       setTimeout(() => {
         // Trigger animations once the page is fully loaded
-        setLoading(false);
+        // const getLoader=removingLoader.current
+        const myTimeLine = gsap.timeline();
+        // Trigger animations once the page is fully loaded
+        myTimeLine
+          .to(".loader-container12", {
+            clipPath: "polygon(100% 0%,100% 0%,100% 100%,100% 100%)",
+            duration: 1,
+          })
+          .to(".loader-container12", {
+            display: "none",
+            zIndex: 0,
+          });
+        console.log("worked1");
         setTimeout(() => {
-          // Trigger animations once the page is fully loaded
+         
+          setTimeout(() => {
+            addAnimation();
+          },100);
+
           document.body.classList.remove("overflow-hidden");
-          
-          addAnimation();
-        });
-      }, 3000);
+          console.log("worked2");
+        }, 1000);
+      }, 2000);
     };
 
     // Check if page has already loaded
@@ -75,16 +94,16 @@ function Intialrender() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#111111]">
-      {loading ? (
-        <div className="min-h-screen absolute z-[999999999] flex items-center justify-center w-screen bg-[#111111]">
+    <div className="min-h-screen bg-[#1111111] ">
+       
+        <div className="min-h-screen loader-container12 absolute z-[999999999] flex items-center justify-center w-screen bg-white">
           <Loader />
         </div>
-      ) : (
-        <div className="font-mono text-[15vw] bg-[#111111] text-white flex place-items-center items-center justify-center min-h-screen">
+      
+        <div className="font-mono text-[15vw] bg-[#111111] z-[9999999999] text-white flex place-items-center items-center justify-center min-h-screen">
           <img
             width="30%"
-            className="absolute z-10 imginf opacity-0  "
+            className="absolute z-10 imginf opacity-30  "
             ref={imgRef} // Attach the ref for GSAP targeting
             src="./Images/infinity-512.png"
             alt=""
@@ -108,7 +127,7 @@ function Intialrender() {
                 T
               </span>
               <span
-                className="animateIT opacity-0"
+                className="animateIT opacity-0 "
                 ref={(el) => {
                   textRef.current[2] = el;
                 }}
@@ -116,7 +135,7 @@ function Intialrender() {
                 H
               </span>
               <span
-                className="animateIT opacity-0"
+                className="animateIT opacity-0 "
                 ref={(el) => {
                   textRef.current[3] = el;
                 }}
@@ -140,7 +159,7 @@ function Intialrender() {
                 N
               </span>
               <span
-                className="animateIT opacity-0"
+                className="animateIT opacity-0 "
                 ref={(el) => {
                   textRef.current[6] = el;
                 }}
@@ -150,23 +169,24 @@ function Intialrender() {
             </div>
             {/* Attach the ref for GSAP targeting */}
             <div className="relative  ">
-           
-              <span className="text-[0.3em] max-sm:text-[0.25em] text-white relative z-20 float-end opacity-0  " ref={nameText}>
-              <a
-              className=" relative block  view tracking-tight font-newname"
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-              }}
-            >
-         ~ Crafted by Ankush
+              <span
+                className="text-[0.3em] max-sm:text-[0.25em] text-white relative z-20 float-end opacity-0  "
+                ref={nameText}
+              >
+                <a
+                  className=" relative block  view tracking-tight font-newname"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                >
+                  ~ Crafted by Ankush
                 </a>
               </span>
-          
             </div>
           </div>
         </div>
-      )}
+      
     </div>
   );
 }

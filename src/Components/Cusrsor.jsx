@@ -8,7 +8,10 @@ function Cusrsor() {
 
     const handlemouse = (event) => {
       const { clientX, clientY } = event;
-      gsap.to(cursor, { x: clientX, y: clientY });
+      gsap.to(cursor, {
+        x: clientX + 6,
+        y: clientY + 6,
+      });
     };
 
     const mouseenter = (event) => {

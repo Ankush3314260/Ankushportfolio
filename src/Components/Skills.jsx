@@ -38,9 +38,9 @@ function Skills() {
             opacity: 1,
             scrollTrigger: {
               trigger: pinskillsection,
-              start: "-50% top",
+              start: "50% top",
               end: "70% 70%",
-              //    markers:true,
+                //  markers:true,
               scrub: 1,
             },
           }
