@@ -68,7 +68,7 @@ function Education() {
         <div className="h-full w-full flex items-center justify-between">
           <div className="w-1/2 text-center">
             <h3 className=""> Post Graduate</h3>
-            <p className="text-[0.5em]">Batch (OCT/2020 -OCT/2023)</p>
+            <p className="text-[0.5em]">Batch (OCT/2023 - <i>present</i> )</p>
           </div>
           <div className="w-1/2 text-white ">
             <div className="w-4/5 border-black bg-white border-[2px] h-[200px] flex items-center text-center relative overflow-hidden">
