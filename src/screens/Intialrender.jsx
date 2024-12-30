@@ -14,7 +14,7 @@ function Intialrender() {
     const addAnimation = () => {
       // Use refs instead of query selectors
 
-      console.log("added");
+      // console.log("added");
 
       const t1 = gsap.timeline({ delay: 0.5 });
       t1.fromTo(
@@ -69,7 +69,7 @@ function Intialrender() {
             display: "none",
             zIndex: 0,
           });
-        console.log("worked1");
+        // console.log("worked1");
         setTimeout(() => {
          
           setTimeout(() => {
@@ -77,7 +77,7 @@ function Intialrender() {
           },100);
 
           document.body.classList.remove("overflow-hidden");
-          console.log("worked2");
+          // console.log("worked2");
         }, 1000);
       }, 2000);
     };
