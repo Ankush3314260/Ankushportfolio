@@ -9,6 +9,24 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face{
+  font-family: 'Boldone';
+  src: url('/fonts/Angelos.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'custom4';
+  src: url('/fonts/Firlest-Regular.otf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'custom5';
+  src: url('/fonts/GakoraDemoVersionVF.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
   font-family: 'Myfont2';
   src: url('/fonts/Segatha.ttf') format("truetype");

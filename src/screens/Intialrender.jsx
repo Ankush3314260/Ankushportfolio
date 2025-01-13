@@ -1,55 +1,67 @@
-import React, { useState, useEffect, useRef } from "react";
+import  { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import Loader from "../Components/Loader";
+import InfiniteAnimation from "../Components/InfiniteAnimation";
 
 function Intialrender() {
-  const [loading, setLoading] = useState(true);
+   const [animate, setAnimate] = useState(false);
 
   // Create refs for the elements to animate
   const textRef = useRef([]);
-  const imgRef = useRef(null);
+  // const imgRef = useRef(null);
   const nameText = useRef(null);
+ useEffect(()=>{
+       if (animate) {
+        const addAnimation = () => {
+          // Use refs instead of query selectors
+    
+          // console.log("added");
+    setTimeout(()=>{
+      document.body.classList.remove("overflow-hidden");
+    })
+          const t1 = gsap.timeline({ delay: 0.5 });
+          t1.to(".circle",{
+            borderRadius:"100%",
+            duration:2
+           }).to(".circle",{
+            scale:100,
+            duration:1,
+            ease:"power3.out"
+           }).to(".circleContaine",{
+            opacity:0,
+            duration:0.5
 
+           }).to(".circleContaine",{
+            display:"none"
+
+           })
+            .fromTo(
+              textRef.current,
+              {
+                opacity: 0,
+                duration: 1,
+                stagger: 0.3,
+              },
+              {
+                opacity: 1,
+                duration: 1,
+                stagger: 0.3,
+              }
+            )
+            .fromTo(
+              nameText.current,
+              {
+                opacity: 0,
+                duration: 2,
+              },
+              { opacity: 1, duration: 2 }
+            );
+        };
+        addAnimation()
+       }
+ },[animate])
   useEffect(() => {
-    const addAnimation = () => {
-      // Use refs instead of query selectors
-
-      // console.log("added");
-
-      const t1 = gsap.timeline({ delay: 0.5 });
-      t1.fromTo(
-        imgRef.current,
-        {
-          opacity: 0.3,
-          duration: 1,
-        },
-        {
-          opacity: 0.1,
-          duration: 2,
-        }
-      )
-        .fromTo(
-          textRef.current,
-          {
-            opacity: 0,
-            duration: 1,
-            stagger: 0.3,
-          },
-          {
-            opacity: 1,
-            duration: 1,
-            stagger: 0.3,
-          }
-        )
-        .fromTo(
-          nameText.current,
-          {
-            opacity: 0,
-            duration: 2,
-          },
-          { opacity: 1, duration: 2 }
-        );
-    };
+  
 
     // Add overflow-hidden class when component mounts (to hide the scroll initially)
     document.body.classList.add("overflow-hidden");
@@ -70,15 +82,7 @@ function Intialrender() {
             zIndex: 0,
           });
         // console.log("worked1");
-        setTimeout(() => {
-         
-          setTimeout(() => {
-            addAnimation();
-          },100);
-
-          document.body.classList.remove("overflow-hidden");
-          // console.log("worked2");
-        }, 1000);
+      
       }, 2000);
     };
 
@@ -95,19 +99,23 @@ function Intialrender() {
 
   return (
     <div className="min-h-screen bg-[#1111111] ">
-       
-        <div className="min-h-screen loader-container12 absolute z-[999999999] flex items-center justify-center w-screen bg-white">
+        
+        <div className="min-h-screen loader-container12 absolute z-[999999999] flex items-center justify-center w-screen bg-black">
           <Loader />
         </div>
-      
+        <div className="absolute z-[99999999] min-h-svh w-screen circleContaine">
+          <InfiniteAnimation addAnimate={setAnimate}  />
+        </div>
         <div className="font-mono text-[15vw] bg-[#111111] z-[9999999999] text-white flex place-items-center items-center justify-center min-h-screen">
-          <img
+        
+          {/* <img
             width="30%"
             className="absolute z-10 imginf opacity-30  "
             ref={imgRef} // Attach the ref for GSAP targeting
             src="./Images/infinity-512.png"
             alt=""
-          />
+          /> */}
+        
           <div className="relative z-0  text-[0.6em] ">
             <div className=" font-btheone">
               <span

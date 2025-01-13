@@ -10,7 +10,7 @@ function Loader() {
         preserveAspectRatio="xMidYMid meet"
       >
         <path
-          stroke="#000000"
+          stroke="#FFFFFF"
           id="outline"
           fill="none"
           strokeWidth="4"
@@ -23,7 +23,7 @@ function Loader() {
           id="outline-bg"
           opacity="0.05"
           fill="none"
-          stroke="#ededed"
+          stroke="#FFFFFF"
           strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"

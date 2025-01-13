@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 import Crousal from "./Crousal";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";

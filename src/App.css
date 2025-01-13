@@ -1,0 +1,65 @@
+.infinitecontainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 80%;
+  bottom: 0;
+  /* background-color: aqua; */
+  z-index: 1;
+  background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+}
+.infinitecontainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  right: 0;
+  bottom: 0;
+  /* background-color: aqua; */
+  z-index: 1;
+  background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+}
+
+/* infinite animation */
+.infiniteaddigAnimation {
+  animation: infin 10s linear infinite;
+}
+@media (max-width: 640px) {
+  .infiniteaddigAnimation {
+    animation: infin2 10s linear infinite;
+  }
+}
+@keyframes infin {
+  100% {
+    transform: translateX(-263%);
+  }
+}
+@keyframes infin2 {
+  100% {
+    transform: translateX(-251.8%);
+  }
+}
+
+.worldbutton {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.worldbutton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 100%;
+  opacity: 0;
+  background-color: black;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.worldbutton:hover::before {
+  opacity: 1;
+  z-index: 0;
+  right: 0;
+}
