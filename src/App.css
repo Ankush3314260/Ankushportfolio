@@ -32,31 +32,21 @@
 }
 @keyframes infin {
   100% {
-    transform: translateX(-265%);
+    transform: translateX(-263.9%);
   }
 }
+
 @keyframes infin2 {
   100% {
-    transform: translateX(-255%);
+    transform: translateX(-249.9%);
   }
 }
 
 .worldbutton {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  background-color: white;
+
 }
-.worldbutton::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border: 2px solid #111111;
-  z-index: -1;
-  transition: all 0.5s;
-  
-}
+
 .worldbutton::before {
   content: "";
   position: absolute;

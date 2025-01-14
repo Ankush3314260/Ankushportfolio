@@ -1,9 +1,10 @@
-import gsap from "gsap";
+
 import "../App.css";
 import { useEffect } from "react";
 import Propstype from "prop-types"
 const InfiniteAnimation = ({ addAnimate }) => {
   const HandleCircle = () => {
+    document.querySelector(".circle").classList.remove("animate-bounce")
     addAnimate(true);
     document.querySelector(".worldbutton").classList.remove("hover:text-white")
 
@@ -68,20 +69,20 @@ const InfiniteAnimation = ({ addAnimate }) => {
             Passoinate
           </p>
         </div>
-        <div className=" flex justify-center items-center relative z-30   translate-y-full p-2 ">
-          <span className="w-5 h-5 max-sm:w-[10px] max-sm:h-[10px] rounded-full  bg-[#111111]   circle  ">
+        <div className=" flex justify-center items-center relative z-30    p-2 ">
+          <span className="w-[15px] h-[15px] max-sm:w-[10px] max-sm:h-[10px] rounded-full animate-bounce  bg-[#111111]   circle  ">
             {" "}
           </span>
         </div>
-        <div className="m-auto  w-1/5 z-50 max-sm:w-2/5 overflow-visible flex items-center relative ">
+        <div className="m-auto  w-1/5  z-50 max-sm:w-2/5 overflow-visible flex items-center relative ">
           <button
-            className=" hover:text-white transition-all duration-200   text-[#111111]  w-full   rounded-sm p-[1.3vw]   m-auto  relative worldbutton block "
+            className=" hover:text-white border-[1px] border-[#111111] transition-all duration-200   text-[#111111]  w-full   rounded-sm p-[1vw]   m-auto  relative worldbutton block "
             onClick={(e) => {
               e.preventDefault();
               HandleCircle();
             }}
           >
-            <p className="relative z-10 text-[2vw] max-sm:text-[12px] "> View My World</p>
+            <p className="relative z-10 text-[1.5vw] max-sm:text-[12px] "> View My World</p>
           </button>
         </div>
       </div>
@@ -90,6 +91,6 @@ const InfiniteAnimation = ({ addAnimate }) => {
 };
 
 InfiniteAnimation.propstype={
-  addAnimate:Propstype.func.isRequired,
+  addAnimate:Propstype.any,
 };
 export default InfiniteAnimation;
