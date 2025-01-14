@@ -1,10 +1,11 @@
 import gsap from "gsap";
 import "../App.css";
 import { useEffect } from "react";
+import Propstype from "prop-types"
 const InfiniteAnimation = ({ addAnimate }) => {
   const HandleCircle = () => {
     addAnimate(true);
-    document.querySelector(".circle").classList.remove("animate-spin");
+    document.querySelector(".worldbutton").classList.remove("hover:text-white")
 
     document.querySelector(".circle").classList.add("z-50");
     document
@@ -67,20 +68,20 @@ const InfiniteAnimation = ({ addAnimate }) => {
             Passoinate
           </p>
         </div>
-        <div className="text-black flex justify-center items-center   p-2 ">
-          <span className="w-5 h-5 max-sm:w-[10px] max-sm:h-[10px]  bg-[#111111]  z-10 circle   animate-spin">
+        <div className=" flex justify-center items-center relative z-30   translate-y-full p-2 ">
+          <span className="w-5 h-5 max-sm:w-[10px] max-sm:h-[10px] rounded-full  bg-[#111111]   circle  ">
             {" "}
           </span>
         </div>
-        <div className="m-auto bg-white/5 w-1/5 max-sm:w-2/5 overflow-visible flex items-center z-10 relative ">
+        <div className="m-auto  w-1/5 z-50 max-sm:w-2/5 overflow-visible flex items-center relative ">
           <button
-            className=" hover:text-white transition-all duration-200  text-black   overflow-visible bg-white w-full   rounded-sm p-[1.3vw]   m-auto  relative worldbutton block"
+            className=" hover:text-white transition-all duration-200   text-[#111111]  w-full   rounded-sm p-[1.3vw]   m-auto  relative worldbutton block "
             onClick={(e) => {
               e.preventDefault();
               HandleCircle();
             }}
           >
-            <p className="relative z-10 text-[2vw] max-sm:text-[12px]"> View My World</p>
+            <p className="relative z-10 text-[2vw] max-sm:text-[12px] "> View My World</p>
           </button>
         </div>
       </div>
@@ -88,4 +89,7 @@ const InfiniteAnimation = ({ addAnimate }) => {
   );
 };
 
+InfiniteAnimation.propstype={
+  addAnimate:Propstype.func.isRequired,
+};
 export default InfiniteAnimation;

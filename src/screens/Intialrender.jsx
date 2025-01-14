@@ -19,14 +19,11 @@ function Intialrender() {
     setTimeout(()=>{
       document.body.classList.remove("overflow-hidden");
     })
-          const t1 = gsap.timeline({ delay: 0.5 });
+          const t1 = gsap.timeline();
           t1.to(".circle",{
-            borderRadius:"100%",
-            duration:2
-           }).to(".circle",{
             scale:100,
             duration:1,
-            ease:"power3.out"
+            ease: "slow"
            }).to(".circleContaine",{
             opacity:0,
             duration:0.5

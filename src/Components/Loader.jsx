@@ -4,8 +4,7 @@ function Loader() {
   return (
     <div className="flex items-center justify-center min-h-screen ">
       <svg
-        width="300px"
-        height="200px"
+        className="max-sm:w-[30vw] sm:w-[10vw]"
         viewBox="0 0 187.3 93.7"
         preserveAspectRatio="xMidYMid meet"
       >
