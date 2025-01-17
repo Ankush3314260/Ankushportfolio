@@ -5,7 +5,7 @@ import InfiniteAnimation from "../Components/InfiniteAnimation";
 
 function Intialrender() {
    const [animate, setAnimate] = useState(false);
-
+   
   // Create refs for the elements to animate
   const textRef = useRef([]);
   // const imgRef = useRef(null);
@@ -21,9 +21,9 @@ function Intialrender() {
     })
           const t1 = gsap.timeline();
           t1.to(".circle",{
-            scale:100,
-            duration:1,
-            ease: "slow"
+            scale:500,
+            duration:2,
+            ease: "expo.inOut"
            }).to(".circleContaine",{
             opacity:0,
             duration:0.5
@@ -76,10 +76,11 @@ function Intialrender() {
           })
           .to(".loader-container12", {
             display: "none",
-            zIndex: 0,
+            zIndex: -10,
           });
+          
         // console.log("worked1");
-      
+       
       }, 2000);
     };
 
@@ -95,14 +96,18 @@ function Intialrender() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#1111111] ">
+    <div className="min-h-screen bg-[#1111111] parentouter">
         
-        <div className="min-h-screen loader-container12 absolute z-[999999999] flex items-center justify-center w-screen bg-black">
-          <Loader />
-        </div>
+          <div className="min-h-screen loader-container12 absolute z-[999999999] flex items-center justify-center w-screen bg-black">
+            <Loader />
+          </div>
+          
         <div className="absolute z-[99999999] min-h-svh w-screen circleContaine">
           <InfiniteAnimation addAnimate={setAnimate}  />
         </div>
+        
+       
+       
         <div className="font-mono text-[15vw] bg-[#111111] z-[9999999999] text-white flex place-items-center items-center justify-center min-h-screen">
         
           {/* <img
