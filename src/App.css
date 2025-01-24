@@ -66,3 +66,19 @@
   right: 0;
 }
 
+/* .animated-text {
+ 
+  animation: flicker 2s infinite;
+} */
+
+@keyframes flicker {
+  0%, 18%, 22%, 42%, 45%, 63%, 66%, 84%, 87% {
+    opacity: 1;
+  }
+  20%, 21%, 43%, 44%, 64%, 65%, 85%, 86% {
+    opacity: 0.5;
+  }
+  19%, 23%, 42%, 46%, 63%, 67%, 84%, 88% {
+    opacity: 0;
+  }
+}

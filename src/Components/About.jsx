@@ -1,4 +1,3 @@
-import React from "react";
 import HoverCard from "@darenft/react-3d-hover-card";
 import "@darenft/react-3d-hover-card/dist/style.css";
 function About() {
@@ -15,7 +14,7 @@ function About() {
       <div className="w-1/2  text-white p-5  max-sm:w-full ">
         <h3 className="text-[0.6em] border-b-[1px] border-white">About </h3>
         <p className="text-[0.4em] py-2">
-          I'm Ankush Kumar, a Frontend Developer specializing in creating
+          I&apos;m Ankush Kumar, a Frontend Developer specializing in creating
           stunning parallax portfolio websites. My best portfolio website
           features dynamic, responsive designs that push the boundaries of web
           interaction. Recognized for its creativity and smooth user experience,
