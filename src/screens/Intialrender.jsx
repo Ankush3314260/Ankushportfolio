@@ -185,8 +185,8 @@ function Intialrender() {
             alt=""
           /> */}
         
-          <div className="relative z-0  text-[0.6em] h-[200vh]   " ref={containeref}>
-            <div className=" font-btheone   h-[20%] translate-y-[100%]">
+          <div className="relative z-0  text-[0.6em] h-[200vh]  w-full  " ref={containeref}>
+            <div className=" font-btheone text-center h-[20%] translate-y-[100%]">
               <span
                 className="animateIT opacity-0"
                 ref={(el) => {
@@ -245,7 +245,7 @@ function Intialrender() {
               </span>
             </div>
             {/* Attach the ref for GSAP targeting */}
-            <div className="relative  ">
+            <div className="relative  -translate-x-[22%]">
               <span
                 className="text-[0.3em] max-sm:text-[0.25em] text-white relative z-20 float-end opacity-0  "
                 ref={nameText}
