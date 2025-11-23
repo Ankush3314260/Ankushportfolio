@@ -147,6 +147,20 @@ function Skills() {
         >
           <div className="min-w-full">
             <div className="w-1/2 m-auto p-4 py-[0.2em]">
+            <svg className="w-1/4 m-auto" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 32 32" version="1.1">
+                  <title>angular</title>
+                  <path d="M24.826 23.885h-3.297l-1.777-4.377h-7.507l-1.777 4.379h-3.299l8.83-19.571zM15.999 1.004l-14.145 4.976 2.157 18.458 11.989 6.557 11.992-6.551 2.154-18.462-14.147-4.977zM13.414 16.806h5.171l-2.587-6.133z" />
+                </svg>
+            </div>
+            <div>
+              <h2 className="text-center text-[0.5em] text-white">Angular</h2>
+              <p className=" text-white text-[0.2em] w-4/5 m-auto text-center">
+             Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your applications.
+              </p>
+            </div>
+          </div>
+          <div className="min-w-full">
+            <div className="w-1/2 m-auto p-4 py-[0.2em]">
               <svg
                 className="w-1/4 animate-spin-slow m-auto"
                 xmlns="http://www.w3.org/2000/svg"

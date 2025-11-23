@@ -6,8 +6,8 @@ import Cusrsor from "./Components/Cusrsor.jsx";
 
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+   <>
    <Cusrsor/>
     <App />
-  </StrictMode>
+   </>
 );
