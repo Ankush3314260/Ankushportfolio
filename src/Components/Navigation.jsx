@@ -8,7 +8,7 @@ function Navigation({ closefunction }) {
     <div className="min-h-screen  bg-white 0 text-[20vw] max-sm:text-[30vw] relative   ">
       <div className="relative h-[80vh]  max-sm:[60vh] shadow-2xl  z-20">
         <div
-          className="w-full h-full bg-white relative z-30 font-custom  "
+          className="w-full h-full bg-white opacity-90 relative z-30 font-custom  "
         
         >
           <a
@@ -68,9 +68,9 @@ function Navigation({ closefunction }) {
           className="absolute flex justify-evenly bottom-0  z-10 text-[0.6em]  right-0 left-0 "
       
         >
-          <span className="block sm:translate-y-[70%] max-sm:translate-y-[100%] font-copyright  text-center">
+          <span className="block sm:translate-y-[70%]  max-sm:translate-y-[100%] font-copyright text-center">
             {" "}
-            &copy;AK 2024
+            &copy;AK 2025
           </span>
           <span className="block text-[0.3em]  translate-y-full  ">
             {" "}
